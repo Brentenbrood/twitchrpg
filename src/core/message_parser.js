@@ -1,5 +1,5 @@
 var user = require("./accounts/user.js");
-var commands = require("./commands.js");
+var commands = require("./commands/command.js");
 
 var message_parser = {};
 

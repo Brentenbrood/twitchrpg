@@ -2,10 +2,10 @@
 var tmi = require('tmi.js');
 var config = require('./config.js');
 var user = require('./src/core/accounts/user.js');
-var message_parser = require('./src/core/accounts/user.js');
+var message_parser = require('./src/core/message_parser.js');
 
 //This is creating our client connection with settings.
-var client = new tmi.client(config.options);
+client = new tmi.client(config.options);
 
 //This connects to the twitch.
 client.connect();
