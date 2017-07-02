@@ -32,15 +32,15 @@ client.on("connected", function(address, port){
 });
 
 //This function is executed everytime someone sends a message in the chat.
-client.on("chat", function(channel, user, message){
+client.on("chat", function(channel, userstate, message){
   //Using this if statement you can check the contents of a message and create commands.
   //This checks the contents of the message to see if they match the given message, this means that the message HAS to be that it cannot just contain that message.
   //This allows you to set commands or even words without worrying if someone was to use the word in a sentence or so on.
   if(message === "Hello"){
-    client.say("channel", " Hi! " + user["display-name"])
+    client.say(channel, " Hi! " + user["display-name"])
   }
 });
 
-client.on("ban", function (channel, username, reason) {
-    client.say("channel", "User: " + user[display-name] + " - has been banned.")
+client.on("ban", function (channel, userstate, message) {
+    client.say(channel, "User: " + user[display-name] + " - has been banned.")
 });
