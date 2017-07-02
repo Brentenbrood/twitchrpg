@@ -1,6 +1,8 @@
-
 //all the other commands
-var echo = require('./echo.js');
+var all_commands = [
+	require('./echo.js'),
+	require('./ping.js')
+];
 
 var command = {};
 module.exports = command;
@@ -37,4 +39,7 @@ command.execute = function(command_name, args, userstate){
 }
 
 //register the commands
-command.add('echo', echo.execute);
+for (var i = 0; i < all_commands.length; i++) {
+	var cmd = all_commands[i];
+	command.add(cmd.command_name, cmd.execute);
+}
