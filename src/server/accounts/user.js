@@ -26,8 +26,6 @@ user.add = function(userstate){
                 console.log('database updated');
             }
         });
-
-
 };
 user.update = function(values){
     users[userstate["user-id"]] = {

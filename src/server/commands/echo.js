@@ -10,4 +10,4 @@ echo.execute = function(args, userdata){
 	}
 
 	client.say("BRENTOLINNI", total);
-}
+};

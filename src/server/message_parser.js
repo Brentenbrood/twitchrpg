@@ -13,7 +13,7 @@ message_parser.prefix = "!";
 //function implementations
 message_parser.init = function(client){
 	client.on('chat', mp.onChat);
-}
+};
 
 /**
  * @param channel {string}
@@ -50,4 +50,4 @@ message_parser.prepareCommand = function(message){
 
 		return {'command': command, 'args': args};
 	}
-}
+};

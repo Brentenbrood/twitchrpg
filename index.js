@@ -1,8 +1,8 @@
 //Initial requires.
 var tmi = require('tmi.js');
 var config = require('./config.js');
-var user = require('./src/core/accounts/user.js');
-var message_parser = require('./src/core/message_parser.js');
+var user = require('./src/server/accounts/user.js');
+var message_parser = require('./src/server/message_parser.js');
 
 //This is creating our client connection with settings.
 client = new tmi.client(config.options);
@@ -22,16 +22,4 @@ client.on("chat", function(channel, userstate, message){
   //Using this if statement you can check the contents of a message and create commands.
   //This checks the contents of the message to see if they match the given message, this means that the message HAS to be that it cannot just contain that message.
   //This allows you to set commands or even words without worrying if someone was to use the word in a sentence or so on.
-  
-  // This is now in message_parser
-  // if(message === "!add"){
-  //   if(user.check(userstate)){
-  //     user.add(usersstate);
-  //   };
-  // }
-
-});
-
-client.on("ban", function (channel, username, reason) {
-    //client.say("channel", "User: " + user[display-name] + " - has been banned.")
 });

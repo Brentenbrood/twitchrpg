@@ -64,3 +64,49 @@ typings/
 # etc
 package-lock.json
 twitchrpg.iml
+
+# =============== #
+# Unity generated #
+# =============== #
+/src/TwitchRPG/[Tt]emp/
+/src/TwitchRPG/[Oo]bj/
+/src/TwitchRPG/[Bb]uild
+/src/TwitchRPG/[Bb]uilds/
+/src/TwitchRPG/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+/src/TwitchRPG/Assets/AssetStoreTools*
+*.apk
+*.unitypackage
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+/src/TwitchRPG/.vs/
+*.userprefs
+*.csproj
+*.pidb
+*.pidb.meta
+*.suo
+/*.sln*
+*.user
+*.unityproj
+*.booproj
+.consulo/
+*.tmp
+*.svd
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+Corridor/Library/ShaderCache/
+Corridor/Library/metadata/
