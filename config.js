@@ -1,4 +1,5 @@
 var config = {};
+module.exports = config;
 
 config.options = {
   options: {
@@ -21,7 +22,7 @@ config.options = {
 
   identity: {
     username: "FILL IN ",
-    password: "oauth:m8kph7twbl290gl9s4h9it1uir4p0c"
+    password: "oauth:"
   },
 
 /* "logger: Object - Custom logger with the methods info, warn, and error"... What signature do the functions have?
