@@ -1,2 +1,5 @@
 To make sure you dont commit 'config.js':
 	git update-index --skip-worktree config.js
+
+Als je even een verandering wilt maken kan je weer verder met tracken door:
+	git update-index --no-skip-worktree config.js
