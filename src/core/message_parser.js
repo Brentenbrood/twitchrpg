@@ -20,7 +20,7 @@ message_parser.onChat = function(channel, userstate, message, self){
 		return;
 
 	var id = userstate['user-id'];
-	if(!user.check(userstate)){
+	if(user.check(userstate)){
 		user.add(userstate);
 	}
 
