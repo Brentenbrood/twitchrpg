@@ -1,4 +1,5 @@
 var config = {};
+module.exports = config;
 
 config.options = {
   options: {
@@ -7,7 +8,7 @@ config.options = {
   },
 
   connection: {
-  	//server: "", //Connect to this server (Overrides cluster and connect to this server instead).
+  	//server: "", //Connect to this server (Overrides cluster and connect to this server instead)
     cluster: "aws",
   	port: 80,
     reconnect: true,
@@ -15,13 +16,13 @@ config.options = {
     maxReconnectInterval: 30000,
     reconnectDecay: 1.5,
     reconnectInterval: 1000,
-    //secure: false, //Use secure connection (SSL / HTTPS) (Overrides port to 443).
+    //secure: false, //Use secure connection (SSL / HTTPS) (Overrides port to 443)
     timeout: 9999
   },
 
   identity: {
-    username: "marco_stone",
-    password: "oauth:m8kph7twbl290gl9s4h9it1uir4p0c"
+    username: "FILL IN ",
+    password: "oauth:"
   },
 
 /* "logger: Object - Custom logger with the methods info, warn, and error"... What signature do the functions have?
