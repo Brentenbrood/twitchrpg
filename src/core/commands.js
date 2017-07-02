@@ -6,7 +6,8 @@ var commands = {};
 commands.list = {};
 
 //function implementations
-commands.add = function(command, callback, allow_overwrite = false){
+commands.add = function(command, callback, allow_overwrite){
+    allow_overwrite = typeof allow_overwrite !== 'undefined' ? allow_overwrite : false;
 	if(commands.isRegistered(command) && !allow_overwrite)
 		throw "command: '" + command + "' is trying to overwrite an already defined function";
 
