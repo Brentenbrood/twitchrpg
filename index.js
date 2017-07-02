@@ -1,5 +1,6 @@
 //Initial requires.
 var tmi = require('tmi.js');
+var config = require('config.js');
 
 //These are the settings for the client to use.
 var options = {
@@ -13,14 +14,14 @@ var options = {
   },
 
   identity: {
-    username: "enter your bots twitch username here",
-    password: "enter your authkey here"
+    username: "marco_stone",
+    password: "oauth:m8kph7twbl290gl9s4h9it1uir4p0c"
   },
-  channels: ["enter channel or channels here, use commas to seperate channels."]
+  channels: ["BRENTOLINNI"]
 }
 
 //This is creating our client connection with settings.
-var client = new tmi.client(options);
+var client = new tmi.client(config.options);
 
 //This connects to the twitch.
 client.connect();

@@ -1,0 +1,496 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scr",
+				"script_manager"
+			],
+			[
+				"fun",
+				"func_name"
+			],
+			[
+				"luab",
+				"luabinding"
+			],
+			[
+				"getFiles",
+				"getFilesWithOpenDir"
+			],
+			[
+				"stop",
+				"stopbutton"
+			],
+			[
+				"add",
+				"addChild"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"use",
+				"useKiwiLoadingScreen"
+			],
+			[
+				"updat",
+				"updateCanvas"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"crea",
+				"createTileType"
+			],
+			[
+				"time",
+				"timePassed"
+			],
+			[
+				"train",
+				"trainEnd"
+			],
+			[
+				"v",
+				"valueMax"
+			],
+			[
+				"track",
+				"trackAmount"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"keyc",
+				"keycode"
+			],
+			[
+				"prev",
+				"prevent_checks"
+			],
+			[
+				"pre",
+				"prevent_checks"
+			],
+			[
+				"addPre",
+				"addPreventCheck"
+			],
+			[
+				"remove",
+				"removePreventEvent"
+			],
+			[
+				"preve",
+				"preventAll"
+			],
+			[
+				"check",
+				"checkEvent"
+			],
+			[
+				"to",
+				"tostring\t.tostring"
+			],
+			[
+				"GetAtta",
+				"GetAttachmentAngles"
+			],
+			[
+				"repo",
+				"repo_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 1470,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "c++",
+		"selected_items":
+		[
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"C#",
+				"Set Syntax: C#"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"squirr",
+				"Set Syntax: Squirrel"
+			],
+			[
+				"squi",
+				"Set Syntax: Squirrel"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Install Package Control"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/maiko/Downloads/SMAPI 1.14.1/README.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Building_Playful_Worlds/Eindopdracht.inc",
+		"/C/Users/maiko/Downloads/output_log.txt",
+		"/C/Users/maiko/Documents/Unity Projects/unity-os/Assets/VirtualComputer/RaceMap.txt",
+		"/C/Users/maiko/Documents/Unity Projects/unity-os/Assets/VirtualComputer/Framework uitgelegd.txt",
+		"/C/Users/maiko/Documents/Tiled/Woon3D.tmx",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/projecten.php",
+		"/C/Users/maiko/OneDrive/HKU/3D_MOD/Maya Projects/Drone/dont_forget.txt",
+		"/C/Users/maiko/OneDrive/HKU/3D_MOD/3dmodel_sites.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Behavioural_Science/Doorlopende_opdracht_Tekst_3.inc",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.482/joepkulderij_3021128_lab_05.pyde",
+		"/C/Users/maiko/OneDrive/HKU/Physical prototyping/Eindopdracht.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Physical_Prototyping/Eindopdracht.inc",
+		"/C/Users/maiko/Documents/Unreal Projects/MoM/.gitignore",
+		"/D/Modding/CS GO/Fidget spinner/fidget-spinners/source/spinner.002_Circle.001.qc",
+		"/C/Users/maiko/Downloads/compiling_tutorial/Tutorial.qc",
+		"/D/Modding/CS GO/Extracted/models/weapons/decompiled 0.42/v_knife_m9_bay.qc",
+		"/C/Users/maiko/Documents/Unreal Projects/MoM/Config/DefaultGame.ini",
+		"/C/Users/maiko/Documents/Unreal Projects/MoM/Config/DefaultInput.ini",
+		"/C/Users/maiko/Documents/Unreal Projects/VRTestProject/Config/DefaultEditor.ini",
+		"/C/Users/maiko/Documents/Unreal Projects/VRTestProject/Config/DefaultEngine.ini",
+		"/C/Users/maiko/Documents/Unreal Projects/VRTestProject/Config/DefaultGame.ini",
+		"/C/Users/maiko/Documents/Unreal Projects/MoM/MatterOfMagnitude.uproject",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/ZMC/Eindopdracht_ZMC_2.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Behavioural_Science/Doorlopende_opdracht_Tekst_2.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/ZMC/Eindopdracht_ZMC2_1.inc",
+		"/C/Users/maiko/Downloads/F25SQUGI0463OHD.ino",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/VirtualComputer/Framework uitgelegd",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.368/Nieuw tekstdocument.txt",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/HexLogic.cs",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/OS1.unity",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/OS1.unity.REMOTE.unity",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/OS1.unity.BASE.unity",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/Prefabs/selectcolor.txt",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.569/Nieuw tekstdocument.txt",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/VirtualComputer/README.txt",
+		"/D/Modding/CS GO/Extracted/models/props_signs/decompiled 0.42/sign_street_02.qc",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/StreamingAssets/unity_debug.lua",
+		"/C/Projects/CppGameEngine/GameEngine/TextureManager.cpp",
+		"/C/Projects/CppGameEngine/RTSGame/UnitController.cpp",
+		"/C/Projects/CppGameEngine/RTSGame/main.cpp",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/VirtualComputer/Scripts/luabindings/vm.lua",
+		"/C/Users/maiko/Documents/Unity Projects/NoesisTest/Assets/NoesisGUI/Samples/Login/LoginWindow.xaml",
+		"/C/Users/maiko/Documents/Unity Projects/NoesisTest/Assets/NoesisGUI/Samples/Buttons/Buttons.xaml",
+		"/C/Users/maiko/Documents/Unity Projects/NoesisTest/Assets/UnityOS/UI/UnityOS_UI.xaml",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/StreamingAssets/luademo.lua",
+		"/C/Users/maiko/Documents/Smite Builds.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Behavioural_Science/Doorlopende_tekst_1.inc",
+		"/C/Users/maiko/Documents/Unity Projects/NoesisTest/Assets/NoesisGUI/Samples/Common/ControlResources.xaml",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Visueel_Denken/Isometrisch_Perspectief.inc",
+		"/C/Projects/count.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Visueel_Denken/Van_opdracht_naar_resultaat.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Visueel_Denken/Kaart van je belevingswereld.inc",
+		"/C/Users/maiko/Documents/Unity Projects/OSTest/Assets/StreamingAssets/inspect.lua",
+		"/C/Users/maiko/Documents/Unity Projects/UnityLuaIntegration/Assets/StreamingAssets/luademo.lua",
+		"/C/Program Files/Unity/Editor/Data/Resources/ScriptTemplates/81-C# Script-NewBehaviourScript.cs.txt",
+		"/C/Program Files/Unity/Editor/Data/Resources/ScriptTemplates/86-C# Script-NewSubStateMachineBehaviourScript.cs.txt",
+		"/C/Program Files/Unity/Editor/Data/Resources/ScriptTemplates/86-C# Script-NewStateMachineBehaviourScript.cs.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/visitors.json",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/visitors.log",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Tekenen_en_Animatie/Van_opdracht_naar_resultaat.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/utils.inc.php",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/CMS.inc.php",
+		"/C/Users/maiko/Documents/Unreal Projects/MatterOfMagnitude/.gitignore",
+		"/C/Users/maiko/Documents/Unreal Projects/MatterOfMagnitude/Config/DefaultEngine.ini",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Narrative_Design/Story_Bible.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Narative_Design/Story Bible.inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/ZMC/Eindopdracht_ZMC_1_(herkansing).inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Portfolio/Personas_v3_(herkansing2).inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Portfolio/Personas_v2_(herkansing).inc",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Portfolio/Personas_v3_(herkansing 2).inc",
+		"/C/Users/maiko/Documents/Unity Projects/Building-Playfull-Worlds/dont-forget.txt",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.611/Nieuw tekstdocument.txt",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.137/Nieuw tekstdocument.txt",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.912/_readme_and_license.txt",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/kiesGame/src/states/loading.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/kiesGame/src/states/bad.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/kiesGame/src/states/play.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/intro.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/kiesGame/src/states/good.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/play.js",
+		"/C/Users/maiko/Music/Nieuw tekstdocument.txt",
+		"/D/Games/Servers/FTB Direwolf 1.10/world/opencomputers/fc38514f-9346-47a7-92fa-15285060043c/home/farm",
+		"/D/Games/Servers/FTB Direwolf 1.10/world/opencomputers/fc38514f-9346-47a7-92fa-15285060043c/home/test",
+		"/D/Games/Servers/FTB Direwolf 1.10/world/opencomputers/fc38514f-9346-47a7-92fa-15285060043c/home/scheduler",
+		"/D/Games/Servers/HermitPack  1.10/config/opencomputers/settings.conf",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/index.html",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/playvideo.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/loading.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/util.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/game.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/traintimer.js",
+		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/lib/prevent_default.js",
+		"/C/Users/maiko/OneDrive/HKU/ISA/logboek.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/KillOnPlant.nut",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/list_entities.nut",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/debug_commands.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/DelayCode.nut",
+		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/fortwars.nut",
+		"/D/Games/Curse/Minecraft/Instances/FTB Presents Direwolf20 1.10/saves/New World/opencomputers/0c29fe3a-201a-4e7a-bcc1-0266ece6e9a3/home/forward",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/game.js",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/play.js",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/intro.js",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/index.html",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/debug.log",
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/loading.js",
+		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/custom/Util.nut",
+		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/player.nut",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/lonely.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/effects/testeffect.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/hammer/spcombinerules/spcombinerules.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/config.360.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/buypresetsdefault_ct.vdf",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/de_safehouse/rampspawn.nut",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/mapspawn.nut",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.710/player.nut",
+		"/D/Games/steamapps/appmanifest_107410.acf",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.508/fortwars.nut",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.071/func_vehicle.nut",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.285/engine.nut",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.558/engine.nut",
+		"/D/hello.txt",
+		"/C/Projects/CppGameEngine/Platformer/EnemyCharacter.h",
+		"/C/Projects/BotLand_Scripts/melee_defender.js",
+		"/C/Projects/BotLand_Scripts/artillery_attacker.js",
+		"/C/Users/maiko/Downloads/implementation.cpp",
+		"/C/Projects/CppGameEngine/a_star.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"Current"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"0",
+			"[0-9]",
+			"0",
+			"[0-9]",
+			"texture",
+			"texWidt",
+			"Tiling_Textures",
+			"ERROR",
+			"inspect",
+			");\n",
+			"morse",
+			"removePreventEvent",
+			"addPreventEvent",
+			"prevented_events"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"1",
+			"0",
+			"removePreventCheck",
+			"addPreventCheck",
+			"prevent_checks"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "twitchrpg.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 35.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
