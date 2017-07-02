@@ -1,0 +1,26 @@
+{
+  "name": "twitchrpg",
+  "version": "1.0.0",
+  "description": "nodejs server for twitchrpg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brentenbrood/twitchrpg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brentenbrood/twitchrpg/issues"
+  },
+  "homepage": "https://github.com/Brentenbrood/twitchrpg#readme",
+  "devDependencies": {
+    "icu": "0.0.0",
+    "irc": "^0.5.2",
+    "node-gyp": "^3.6.2",
+    "tmi.js": "^1.2.1"
+  }
+}
