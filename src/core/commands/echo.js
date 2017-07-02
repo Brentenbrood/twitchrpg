@@ -1,6 +1,8 @@
 var echo = {};
 module.exports = echo;
 
+echo.command_name = "echo";
+
 echo.execute = function(args, userdata){
 	var total = "";
 	for(var i = 0; i < args.length; i++){
