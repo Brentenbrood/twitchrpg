@@ -1,6 +1,7 @@
 
 
 var commands = {};
+module.exports = commands;
 
 //variable declaration
 commands.list = {};

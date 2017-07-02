@@ -11,7 +11,7 @@ var mp = message_parser;
 message_parser.prefix = "!";
 
 //function implementations
-message_parser.initializeEventHandlers = function(client){
+message_parser.init = function(client){
 	client.on('chat', mp.onChat);
 }
 
@@ -20,7 +20,7 @@ message_parser.onChat = function(channel, userstate, message, self){
 		return;
 
 	var id = userstate['user-id'];
-	if(!user.exists(id)){
+	if(!user.check(userstate)){
 		user.add(userstate);
 	}
 
