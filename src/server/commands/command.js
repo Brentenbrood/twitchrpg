@@ -13,8 +13,7 @@ module.exports = command;
 command.list = {};
 
 //function implementations
-command.add = function(command_name, callback, allow_overwrite){
-    allow_overwrite = typeof allow_overwrite !== 'undefined' ? allow_overwrite : false;
+command.add = function(command_name, callback, allow_overwrite = false){
 	if(command.isRegistered(command_name) && !allow_overwrite)
 		throw "command_name: '" + command_name + "' is trying to overwrite an already defined function";
 

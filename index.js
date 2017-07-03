@@ -3,6 +3,20 @@ var tmi = require('tmi.js');
 var config = require('./config.js');
 var user = require('./src/server/accounts/user.js');
 var message_parser = require('./src/server/message_parser.js');
+const net = require('net');
+server = net.createServer(function (socket) {
+    console.log('client connected');
+    socket.on("end", function(){
+       console.log("client disconnected");
+    });
+    socket.pipe(socket);
+});
+server.on('error', (err) => {
+    throw err;
+});
+server.listen(8124, () => {
+    console.log('server bound');
+});
 
 //This is creating our client connection with settings.
 client = new tmi.client(config.options);

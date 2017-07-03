@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchRPG.Plugins", "TwitchRPG.Plugins.csproj", "{45146FC9-354E-3410-57E5-C101BEBFFCA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchRPG", "TwitchRPG.csproj", "{5151C056-482A-8813-34D5-F08E9202EF5C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchRPG.Editor.Plugins", "TwitchRPG.Editor.Plugins.csproj", "{627BBDA8-60C0-6F11-3B9F-6114C7D92B6A}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{45146FC9-354E-3410-57E5-C101BEBFFCA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45146FC9-354E-3410-57E5-C101BEBFFCA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45146FC9-354E-3410-57E5-C101BEBFFCA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5151C056-482A-8813-34D5-F08E9202EF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5151C056-482A-8813-34D5-F08E9202EF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5151C056-482A-8813-34D5-F08E9202EF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5151C056-482A-8813-34D5-F08E9202EF5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{627BBDA8-60C0-6F11-3B9F-6114C7D92B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{627BBDA8-60C0-6F11-3B9F-6114C7D92B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{627BBDA8-60C0-6F11-3B9F-6114C7D92B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU

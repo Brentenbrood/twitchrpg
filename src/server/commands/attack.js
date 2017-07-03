@@ -8,4 +8,12 @@ attack.execute = function(args, userstate){
     var enemy  = args;
     var damage = users[userstate["user-id"]].attack;
     client.say("BRENTOLINNI", userstate["display-name"] + " did " + damage + " damage to "+ enemy +"!");
+    var data = {
+        'username': userstate["display-name"],
+        'enemy': enemy,
+        'damage': damage,
+    };
+    server.on('listening', function(socket){
+        socket.write(data);
+    });
 };
