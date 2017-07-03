@@ -13,7 +13,13 @@ attack.execute = function(args, userstate){
         'enemy': enemy,
         'damage': damage,
     };
-    server.on('listening', function(socket){
+/*    var socket = server.getsocket();
+    console.log(socket);
+    if(typeof socket != "undefined"){
         socket.write(data);
-    });
+    }*/
+
+    // server.listen(8124, (c) => {
+    //     c.write(data);
+    // });
 };
