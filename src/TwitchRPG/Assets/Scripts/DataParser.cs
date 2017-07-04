@@ -1,17 +1,16 @@
-﻿using System.Collections;
+﻿using SocketIO;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DataParser : MonoBehaviour {
 
-    public string IP_Address = "";
-    public int Port = 8124;
+    public SocketIOComponent socket;
 
 	// Use this for initialization
 	void Start () {
-        SocketConnection socket = new SocketConnection();
-        //socket.SetupServer(IP_Address, Port);
-        
+        socket = this.GetComponent<SocketIOComponent>();
+        socket.Emit("connected");
 	}
 	
 	// Update is called once per frame

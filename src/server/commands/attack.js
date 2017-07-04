@@ -22,4 +22,6 @@ attack.execute = function(args, userstate){
     // server.listen(8124, (c) => {
     //     c.write(data);
     // });
+    console.log(io);
+    io.emit('hallo', 'wereld');
 };
