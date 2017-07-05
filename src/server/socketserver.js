@@ -1,22 +1,30 @@
 const net = require('net');
-var server = { };
-module.exports = server;
+var socketserver = { };
+module.exports = socketserver;
+
+socketserver.sockets = []
 
 // var socket;
 // server.getsocket = function(){
 //     return this.socket;
 // };
-server = net.createServer(function (socket) {
+socketserver.server = net.createServer(function (socket) {
     console.log('client connected');
-    server.socket = socket;
+    socketserver.sockets.push(socket);
     socket.on("end", function(){
         console.log("client disconnected");
     });
     socket.pipe(socket);
 });
-server.on('error', (err) => {
+socketserver.server.on('error', (err) => {
     throw err;
 });
-server.listen(8124, () => {
+socketserver.server.listen(8124, () => {
     console.log('server bound');
 });
+
+socketserver.write = function(data){
+	for (var i = 0; i < socketserver.sockets.length; i++) {
+		socketserver.sockets[i].write(data);
+	}
+}

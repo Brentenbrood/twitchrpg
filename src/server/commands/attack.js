@@ -13,11 +13,11 @@ attack.execute = function(args, userstate){
         'enemy': enemy,
         'damage': damage,
     };
-/*    var socket = server.getsocket();
+    var socket = server.server.socket;
     console.log(socket);
     if(typeof socket != "undefined"){
         socket.write(data);
-    }*/
+    }
 
     // server.listen(8124, (c) => {
     //     c.write(data);
