@@ -144,11 +144,18 @@
 	"buffers":
 	[
 		{
+			"file": "/C/Projects/mc fisher/index.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 1188,
-				"encoding": "UTF-8",
+				"buffer_size": 1524,
 				"line_ending": "Windows"
 			}
 		},
@@ -157,16 +164,6 @@
 			"settings":
 			{
 				"buffer_size": 852,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/server/socketserver.js",
-			"settings":
-			{
-				"buffer_size": 720,
-				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -174,7 +171,7 @@
 			"file": "src/server/commands/attack.js",
 			"settings":
 			{
-				"buffer_size": 681,
+				"buffer_size": 734,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -260,13 +257,18 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/twitchrpg/index.js",
+		"/C/Projects/twitchrpg/config.js",
+		"/C/Projects/twitchrpg/Usefull things to remember.txt",
+		"/C/Projects/twitchrpg/src/server/socketserver.js",
+		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity.REMOTE.unity",
+		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity",
 		"/C/Projects/twitchrpg/package.json",
 		"/C/Projects/twitchrpg/src/core/commands/echo.js",
 		"/C/Projects/twitchrpg/src/core/commands/attack.js",
 		"/C/Projects/twitchrpg/src/core/commands/command.js",
 		"/C/Projects/twitchrpg/src/core/message_parser.js",
 		"/C/Projects/twitchrpg/src/core/commands/ping.js",
-		"/C/Projects/twitchrpg/Usefull things to remember.txt",
 		"/C/Projects/twitchrpg/src/core/accounts/users.json",
 		"/C/Projects/twitchrpg/node_modules/tmi.js/lib/commands.js",
 		"/C/Users/maiko/AppData/Roaming/Sublime Text 3/Packages/User/Twitchbot_command.sublime-snippet",
@@ -382,12 +384,7 @@
 		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/loading.js",
 		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/custom/Util.nut",
 		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/player.nut",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/lonely.cfg",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/effects/testeffect.txt",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/hammer/spcombinerules/spcombinerules.txt",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/config.360.cfg",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/buypresetsdefault_ct.vdf",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/de_safehouse/rampspawn.nut"
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/lonely.cfg"
 	],
 	"find":
 	{
@@ -453,19 +450,47 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.js",
+					"file": "/C/Projects/mc fisher/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1188,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								197,
-								197
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -478,11 +503,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "config.js",
 					"semi_transient": false,
 					"settings":
@@ -494,41 +519,15 @@
 						"selection":
 						[
 							[
-								821,
-								821
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/server/socketserver.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 720,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								582,
-								582
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -543,15 +542,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 681,
+						"buffer_size": 734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								479,
-								479
+								0,
+								0
 							]
 						],
 						"settings":
@@ -564,7 +563,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -15,22 +15,34 @@ public class SocketConnection : MonoBehaviour
     public string IP = "127.0.0.1"; //
     public int Port = 8124;
 
+    bool keepSending = true;
+
     private void Start()
     {
-        SetupServer();
+        ConnectToServer();
+        StartCoroutine(SendBytes());
     }
-    
+
+    private void OnDisable()
+    {
+        keepSending = false;
+        _clientSocket.Disconnect(false);
+
+    }
+
     IEnumerator SendBytes()
     {
-        byte[] chars = System.Text.Encoding.ASCII.GetBytes("Hello blah blah");
-        while (true)
+        byte[] chars = System.Text.Encoding.UTF8.GetBytes("Hello blah blah");
+        while (keepSending)
         {
             SendData(chars);
             yield return new WaitForSeconds(0.5f);
         }
+
+        Debug.Log("Disconnecting...");
     }
 
-    private void SetupServer()
+    private void ConnectToServer()
     {
         try
         {

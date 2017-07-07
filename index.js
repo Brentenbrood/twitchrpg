@@ -1,22 +1,25 @@
 //Initial requires.
 var tmi = require('tmi.js');
-var config = require('./config.js');
 var user = require('./src/server/accounts/user.js');
 var message_parser = require('./src/server/message_parser.js');
-const server = require('http').createServer();
-const io = require('socket.io')(server, {
-    path: '/data',
-    serveClient: false,
-    // below are engine.IO options
-    pingInterval: 10000,
-    pingTimeout: 5000,
-    cookie: false
-});
-server.listen(8124);
-server.on('connection', function(socket) {
-    console.log('client connected');
-    socket.emit('message', 'Hello World!');
-});
+var socketserver = require('./src/server/socketserver.js');
+
+config = require('./config.js');
+
+// const server = require('http').createServer();
+// const io = require('socket.io')(server, {
+//     path: '/data',
+//     serveClient: false,
+//     // below are engine.IO options
+//     pingInterval: 10000,
+//     pingTimeout: 5000,
+//     cookie: false
+// });
+// server.listen(8124);
+// server.on('connection', function(socket) {
+//     console.log('client connected');
+//     socket.emit('message', 'Hello World!');
+// });
 
 //This is creating our client connection with settings.
 client = new tmi.client(config.options);
