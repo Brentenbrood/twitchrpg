@@ -21,7 +21,7 @@ public class SocketConnection : MonoBehaviour
     {
         ConnectToServer();
         //GetAllPlayers();
-        //StartCoroutine(SendBytes());
+        StartCoroutine(SendBytes());
     }
 
     private void OnDisable()
@@ -72,7 +72,7 @@ public class SocketConnection : MonoBehaviour
 
         //Process data here the way you want , all your bytes will be stored in recData
         string stringdata = System.Text.Encoding.Default.GetString(recData);
-        Debug.Log(stringdata);
+        Debug.Log("Received: " + stringdata);
         JsonUtility.FromJson<PlayerData>(stringdata);
 
         //Start receiving again
@@ -95,7 +95,7 @@ public class SocketConnection : MonoBehaviour
         if (_clientSocket.Connected)
         {
             SendData(data);
-            Debug.Log("sending message");
+            Debug.Log("sent message: " + data);
         }
         else
         {

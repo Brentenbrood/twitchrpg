@@ -20,7 +20,7 @@ var server = net.createServer(function (socket) {
 				socket.write(players);
 				break;
 			default:
-				console.log(data);
+				socketserver.broadcast('yes! I received: ' + data);
 				break;
 		}
 
