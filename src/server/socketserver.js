@@ -12,12 +12,12 @@ var server = net.createServer(function (socket) {
     clients.push(socket);
 
     socket.on('data', function(data){
-    	console.log("received data: '" + data + "'")
+    	console.log("received data: '" + data + "'");
 		data = data.toString('utf8');
     	switch(data){
 			case "getallplayers":
 				var players = user.getAll();
-				socket.write(players);
+				socketserver.broadcast(players);
 				break;
 			default:
 				console.log(data);
@@ -37,9 +37,7 @@ var server = net.createServer(function (socket) {
 
     });
 
-    socket.write("Hello sir!");
-
-    socket.pipe(socket);
+    socket.write('{"type":"connection_start"}');
 });
 
 server.on('error', (err) => {

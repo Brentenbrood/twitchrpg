@@ -6,20 +6,24 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using SimpleJSON;
 
 public class SocketConnection : MonoBehaviour
 {
     private Socket _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
     private byte[] _recieveBuffer = new byte[8142];
+    private DataParser parse;
 
     public string IP = "127.0.0.1"; //
     public int Port = 8124;
+    private string type;
 
     bool keepSending = true;
 
     private void Start()
     {
         ConnectToServer();
+        parse = GetComponent<DataParser>();
         //GetAllPlayers();
         //StartCoroutine(SendBytes());
     }
@@ -60,6 +64,7 @@ public class SocketConnection : MonoBehaviour
 
     private void ReceiveCallback(IAsyncResult AR)
     {
+
         //Check how much bytes are recieved and call EndRecieve to finalize handshake
         int recieved = _clientSocket.EndReceive(AR);
 
@@ -71,9 +76,21 @@ public class SocketConnection : MonoBehaviour
         Buffer.BlockCopy(_recieveBuffer, 0, recData, 0, recieved);
 
         //Process data here the way you want , all your bytes will be stored in recData
+        //Debug.Log(recData);
         string stringdata = System.Text.Encoding.Default.GetString(recData);
-        Debug.Log(stringdata);
-        JsonUtility.FromJson<PlayerData>(stringdata);
+        //Debug.Log(stringdata);
+        JSONNode jsondata = JSON.Parse(stringdata);
+        //Debug.Log(jsondata["type"]);
+        switch (jsondata["type"].Value)
+        {
+            case "playerlist":
+                Debug.Log(jsondata["data"]);
+                //parse.PopulatePlayerList(players);
+                break;
+            default:
+                break;
+        }
+        //PlayerData.CreateFromJSON(stringdata);
 
         //Start receiving again
         _clientSocket.BeginReceive(_recieveBuffer, 0, _recieveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
@@ -94,17 +111,15 @@ public class SocketConnection : MonoBehaviour
     {
         if (_clientSocket.Connected)
         {
+            //_clientSocket.BeginReceive(_recieveBuffer, 0, _recieveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
             SendData(data);
-            Debug.Log("sending message");
+            //Debug.Log("sending message");
         }
         else
         {
             yield return new WaitForSeconds(0.5f);
             StartCoroutine(SendQueue(data));
-            Debug.Log("Retrying Connection");
+            //Debug.Log("Retrying Connection");
         }
-
-        
-        
     }
 }

@@ -4,7 +4,7 @@ var user = { };
 module.exports = user;
 
 user.check = function(userstate){
-    for (var user_id in users) {
+    for (var user_id in users.data) {
         if(userstate["user-id"] == user_id) {
             console.log(userstate["user-id"] + " already exists");
             return false;
@@ -13,13 +13,14 @@ user.check = function(userstate){
     return true;
 };
 user.add = function(userstate){
-    users[userstate["user-id"]] = {
+    users.data[userstate["user-id"]] = {
         "name": userstate["display-name"],
         "level": 1,
         "attack": 20,
         "xp": 0
     };
-        fs.writeFile('./src/core/accounts/users.json', JSON.stringify(users), function (err) {
+    console.log(users);
+        fs.writeFile('./src/server/accounts/users.json', JSON.stringify(users), function (err) {
             if(err == !null){
                 console.log(err);
             } else {
@@ -28,7 +29,7 @@ user.add = function(userstate){
         });
 };
 user.update = function(values){
-    users[userstate["user-id"]] = {
+    users.data[userstate["user-id"]] = {
         "level": values.xp,
         "xp": values.xp
     };
