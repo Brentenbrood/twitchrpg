@@ -20,7 +20,7 @@ public class SocketConnection : MonoBehaviour
     private void Start()
     {
         ConnectToServer();
-        StartCoroutine(SendBytes());
+        //StartCoroutine(SendBytes());
     }
 
     private void OnDisable()
@@ -70,14 +70,23 @@ public class SocketConnection : MonoBehaviour
         Buffer.BlockCopy(_recieveBuffer, 0, recData, 0, recieved);
 
         //Process data here the way you want , all your bytes will be stored in recData
-        Debug.Log(System.Text.Encoding.Default.GetString(recData));
+        string stringdata = System.Text.Encoding.Default.GetString(recData);
+        Debug.Log(stringdata);
+        JsonUtility.FromJson<PlayerData>(stringdata);
 
         //Start receiving again
         _clientSocket.BeginReceive(_recieveBuffer, 0, _recieveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
     }
 
-    private void SendData(byte[] data)
+    public void SendData(byte[] data)
     {
+        SocketAsyncEventArgs socketAsyncData = new SocketAsyncEventArgs();
+        socketAsyncData.SetBuffer(data, 0, data.Length);
+        _clientSocket.SendAsync(socketAsyncData);
+    }
+    public void GetAllPlayers()
+    {
+        byte[] data = System.Text.Encoding.UTF8.GetBytes("getallplayers");
         SocketAsyncEventArgs socketAsyncData = new SocketAsyncEventArgs();
         socketAsyncData.SetBuffer(data, 0, data.Length);
         _clientSocket.SendAsync(socketAsyncData);

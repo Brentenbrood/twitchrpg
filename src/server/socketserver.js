@@ -1,4 +1,5 @@
 var net = require('net');
+var user = require('./accounts/user.js');
 var socketserver = {};
 module.exports = socketserver;
 
@@ -12,6 +13,14 @@ var server = net.createServer(function (socket) {
 
     socket.on('data', function(data){
     	console.log("received data: '" + data + "'");
+    	switch(data){
+			case "getallplayers":
+				user.getAll();
+				break;
+			default:
+				break;
+		}
+
     });
 
     socket.on("end", function(){

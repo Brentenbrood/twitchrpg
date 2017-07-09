@@ -2,7 +2,7 @@
 var tmi = require('tmi.js');
 var user = require('./src/server/accounts/user.js');
 var message_parser = require('./src/server/message_parser.js');
-var socketserver = require('./src/server/socketserver.js');
+socketserver = require('./src/server/socketserver.js');
 
 config = require('./config.js');
 

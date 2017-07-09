@@ -33,3 +33,7 @@ user.update = function(values){
         "xp": values.xp
     };
 };
+user.getAll = function(){
+    var data = JSON.stringify(users);
+    socketserver.broadcast(data);
+};
