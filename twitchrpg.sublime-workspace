@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"tmi",
+				"tmi_client"
+			],
+			[
+				"mess",
+				"message_parser"
+			],
+			[
 				"socket",
-				"socket"
+				"socketserver"
 			],
 			[
 				"sock",
@@ -26,10 +34,6 @@
 			[
 				"com",
 				"commands"
-			],
-			[
-				"mess",
-				"message_parser"
 			],
 			[
 				"pre",
@@ -144,18 +148,11 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Projects/mc fisher/index.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 1524,
+				"buffer_size": 1166,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -163,15 +160,46 @@
 			"file": "config.js",
 			"settings":
 			{
-				"buffer_size": 852,
+				"buffer_size": 928,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/server/commands/attack.js",
+			"file": "src/server/socketserver.js",
 			"settings":
 			{
-				"buffer_size": 734,
+				"buffer_size": 1082,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var attack = {};\nmodule.exports = attack;\nvar users = require('../accounts/users.json');\n\nattack.command_name = \"attack\";\n\nattack.execute = function(args, userstate){\n    var enemy  = args;\n    var damage = users[userstate[\"user-id\"]].attack;\n    client.say(config.channel, userstate[\"display-name\"] + \" did \" + damage + \" damage to \"+ enemy +\"!\");\n    var data = {\n        'username': userstate[\"display-name\"],\n        'enemy': enemy,\n        'damage': damage,\n    };\n    socketserver.broadcast(userstate[\"display-name\"] + \" did \" + damage + \" damage to \"+ enemy +\"!\");\n};",
+			"file": "src/server/commands/attack.js",
+			"file_size": 603,
+			"file_write_time": 131440752615732672,
+			"settings":
+			{
+				"buffer_size": 574,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/commands/echo.js",
+			"settings":
+			{
+				"buffer_size": 233,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/commands/ping.js",
+			"settings":
+			{
+				"buffer_size": 149,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -257,9 +285,16 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/twitchrpg/Usefull things to remember.txt",
+		"/C/Projects/twitchrpg/src/server/message_parser.js",
+		"/C/Projects/twitchrpg/src/server/accounts/user.js",
+		"/C/Projects/twitchrpg/src/server/accounts/users.json",
+		"/C/Projects/twitchrpg/node_modules/socket.io/lib/index.js",
+		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.946/server.js",
+		"/C/Projects/twitchrpg/servertest.js",
+		"/C/Projects/mc fisher/index.js",
 		"/C/Projects/twitchrpg/index.js",
 		"/C/Projects/twitchrpg/config.js",
-		"/C/Projects/twitchrpg/Usefull things to remember.txt",
 		"/C/Projects/twitchrpg/src/server/socketserver.js",
 		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity.REMOTE.unity",
 		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity",
@@ -377,18 +412,11 @@
 		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/fortwars.nut",
 		"/D/Games/Curse/Minecraft/Instances/FTB Presents Direwolf20 1.10/saves/New World/opencomputers/0c29fe3a-201a-4e7a-bcc1-0266ece6e9a3/home/forward",
 		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/game.js",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/play.js",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/intro.js",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/index.html",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/debug.log",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/loading.js",
-		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/custom/Util.nut",
-		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/player.nut",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/lonely.cfg"
+		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/states/play.js"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -403,6 +431,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"already exists",
+			"mp",
 			"commands",
 			"command",
 			"slices",
@@ -427,6 +457,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"message_parser",
 			"command",
 			"command_name",
 			"args",
@@ -436,7 +467,7 @@
 			"addPreventCheck",
 			"prevent_checks"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": true,
@@ -445,24 +476,84 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Projects/mc fisher/index.js",
+					"file": "index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1166,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								102,
+								114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								928,
+								928
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/server/socketserver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								711,
+								711
 							]
 						],
 						"settings":
@@ -473,67 +564,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1524,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 852,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -542,14 +573,14 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 734,
+						"buffer_size": 574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
+								574,
 								0
 							]
 						],
@@ -563,7 +594,63 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/server/commands/echo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/server/commands/ping.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

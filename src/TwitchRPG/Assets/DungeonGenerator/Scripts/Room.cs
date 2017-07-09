@@ -55,7 +55,7 @@ namespace EL.Dungeon {
              }
              return false;
          }
-
+         
          public GeneratorDoor GetFirstOpenDoor() {
              for (int i = 0; i < doors.Count; i++) {
                  if (doors[i].open) return doors[i];

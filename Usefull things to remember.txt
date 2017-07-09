@@ -6,3 +6,8 @@ Als je even een verandering wilt maken kan je weer verder met tracken door:
 
 Voor sublime text 3, build tools:
 	http://docs.sublimetext.info/en/latest/reference/build_systems/configuration.html#build-system-variables
+
+Om in node te debuggen met Chrome, start met:
+	node --inspect index.js
+Om niet steeds de link te hoeven kopieren naar chrome dan kan je naar deze link gaan als 'hub':
+	about:inspect

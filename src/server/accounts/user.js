@@ -6,7 +6,7 @@ module.exports = user;
 user.check = function(userstate){
     for (var user_id in users) {
         if(userstate["user-id"] == user_id) {
-            console.log(userstate["user-id"] + " already exists");
+            //console.log(userstate["user-id"] + " already exists");
             return false;
         }
     }

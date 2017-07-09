@@ -100,6 +100,33 @@ namespace Generators
             CreateWorldGeometry();
         }
 
+        void GeneratePoints()
+        {
+            for (int i = 0; i < points.Length;)
+            {
+                int x = Random.Range(0, map.Width);
+                int y = Random.Range(0, map.Height);
+
+                if (!PointExists(x, y))
+                {
+                    map.Set(x, y, 1);
+                    points[i] = new Point(x, y);
+                    i++;
+                }
+            }
+        }
+
+        bool PointExists(int x, int y)
+        {
+            foreach (Point point in points)
+            {
+                if (point.X == x && point.X == y)
+                    return true;
+            }
+
+            return false;
+        }
+
         private void ConnectPoints()
         {
             List<Point>[] connectedPoints = new List<Point>[points.Length];
@@ -149,13 +176,12 @@ namespace Generators
 
             Point[] sortingPoints = new Point[points.Length];
             Array.Copy(points, sortingPoints, points.Length);
-            Array.Sort(sortingPoints, new SortByDistance(new Point(x, y)));
+            Array.Sort(sortingPoints, new SortByDistance(fromPoint));
 
             List<Point> pointsWithin = new List<Point>();
             for (int i = 0; i < sortingPoints.Length && pointsWithin.Count < radiusPerPoint.Length; i++)
             {
                 Point toPoint= sortingPoints[i];
-                
 
                 if (Vector2.Distance(fromVector2, new Vector2(toPoint.X, toPoint.Y)) <= radiusPerPoint[pointsWithin.Count] && toPoint != fromPoint )
                 {
@@ -164,33 +190,6 @@ namespace Generators
             }
 
             return pointsWithin;
-        }
-
-        void GeneratePoints()
-        {
-            for (int i = 0; i < points.Length; )
-            {
-                int x = Random.Range(0, map.Width);
-                int y = Random.Range(0, map.Height);
-
-                if (!PointExists(x, y))
-                {
-                    map.Set(x, y, 1);
-                    points[i] = new Point(x, y);
-                    i++;
-                }
-            }
-        }
-
-        bool PointExists(int x, int y)
-        {
-            foreach (Point point in points)
-            {
-                if (point.X == x && point.X == y)
-                    return true;
-            }
-
-            return false;
         }
 
         bool CreateCorridor(Point a, Point b)
