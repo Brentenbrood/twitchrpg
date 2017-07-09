@@ -12,12 +12,15 @@ var server = net.createServer(function (socket) {
     clients.push(socket);
 
     socket.on('data', function(data){
-    	console.log("received data: '" + data + "'");
+    	console.log("received data: '" + data + "'")
+		data = data.toString('utf8');
     	switch(data){
 			case "getallplayers":
-				user.getAll();
+				var players = user.getAll();
+				socket.write(players);
 				break;
 			default:
+				console.log(data);
 				break;
 		}
 
@@ -55,4 +58,4 @@ socketserver.broadcast = function(msg){
 	});
 
 	console.log("broadcasted: '" + msg + "'");
-}
+};

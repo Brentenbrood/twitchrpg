@@ -35,5 +35,6 @@ user.update = function(values){
 };
 user.getAll = function(){
     var data = JSON.stringify(users);
-    socketserver.broadcast(data);
+    console.log(users);
+    return data;
 };

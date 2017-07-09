@@ -20,6 +20,7 @@ public class SocketConnection : MonoBehaviour
     private void Start()
     {
         ConnectToServer();
+        //GetAllPlayers();
         //StartCoroutine(SendBytes());
     }
 
@@ -78,7 +79,7 @@ public class SocketConnection : MonoBehaviour
         _clientSocket.BeginReceive(_recieveBuffer, 0, _recieveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
     }
 
-    public void SendData(byte[] data)
+    private void SendData(byte[] data)
     {
         SocketAsyncEventArgs socketAsyncData = new SocketAsyncEventArgs();
         socketAsyncData.SetBuffer(data, 0, data.Length);
@@ -87,8 +88,23 @@ public class SocketConnection : MonoBehaviour
     public void GetAllPlayers()
     {
         byte[] data = System.Text.Encoding.UTF8.GetBytes("getallplayers");
-        SocketAsyncEventArgs socketAsyncData = new SocketAsyncEventArgs();
-        socketAsyncData.SetBuffer(data, 0, data.Length);
-        _clientSocket.SendAsync(socketAsyncData);
+        StartCoroutine(SendQueue(data));
+    }
+    IEnumerator SendQueue(byte[] data)
+    {
+        if (_clientSocket.Connected)
+        {
+            SendData(data);
+            Debug.Log("sending message");
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine(SendQueue(data));
+            Debug.Log("Retrying Connection");
+        }
+
+        
+        
     }
 }
