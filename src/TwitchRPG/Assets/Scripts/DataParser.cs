@@ -1,17 +1,15 @@
-﻿using SocketIO;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DataParser : MonoBehaviour {
 
-    public SocketIOComponent socket;
-
+    public SocketConnection socket;
+    public PlayerData players;
 	// Use this for initialization
 	void Start () {
-        socket = this.GetComponent<SocketIOComponent>();
-        socket.Emit("connected");
-	}
+        socket.GetAllPlayers();
+    }
 	
 	// Update is called once per frame
 	void Update () {

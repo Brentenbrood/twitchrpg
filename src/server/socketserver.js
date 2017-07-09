@@ -1,4 +1,5 @@
 var net = require('net');
+var user = require('./accounts/user.js');
 var socketserver = {};
 module.exports = socketserver;
 
@@ -11,7 +12,18 @@ var server = net.createServer(function (socket) {
     socketserver.clients.push(socket);
 
     socket.on('data', function(data){
-    	console.log("received data: '" + data + "'");
+    	console.log("received data: '" + data + "'")
+		data = data.toString('utf8');
+    	switch(data){
+			case "getallplayers":
+				var players = user.getAll();
+				socket.write(players);
+				break;
+			default:
+				console.log(data);
+				break;
+		}
+
     });
 
     socket.on("end", function(){
@@ -46,4 +58,4 @@ socketserver.broadcast = function(msg){
 	});
 
 	console.log("broadcasted: '" + msg + "'");
-}
+};

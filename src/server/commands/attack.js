@@ -13,5 +13,7 @@ attack.execute = function(args, userstate){
         'enemy': enemy,
         'damage': damage,
     };
-    var socket = socketserver.broadcast(userstate["display-name"] + " did " + damage + " damage to "+ enemy +"!");
+    data = JSON.stringify(data);
+    console.log(data);
+    socketserver.broadcast(data);
 };
