@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2899c3d9e7c3f4fa085c4fb65d8ee858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb16fe2dfe2237149bdc3ee10c4cc947, type: 2}
+  data: {fileID: 11400000, guid: f248341d028d44f57b8f35fc4aac676a, type: 2}
   dungeonSet: 0
   seed: 833340473
   randomizeSeedOnStart: 1

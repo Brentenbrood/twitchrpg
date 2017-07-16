@@ -39,7 +39,7 @@ var server = net.createServer(function (socket) {
 
     socket.write("Hello sir!");
 
-    socket.pipe(socket);
+    //socket.pipe(socket);
 });
 
 server.on('error', (err) => {

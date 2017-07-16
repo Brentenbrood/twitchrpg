@@ -14,19 +14,19 @@ namespace EL.Dungeon {
         public GameObject gameObjectContainer;
         public Bounds bounds;
 
-        public float voxelScale = 10f;
+        public static float VoxelScale = 10f;
 
        
         public void OnDrawGizmos() {
             if (!drawVolume) {
-                if (bounds == null) return;
+                //if (bounds == null) return;
                 Gizmos.color = Color.red;
                 Gizmos.DrawWireCube(bounds.center, bounds.size);
             } else {
                 if (gameObjectContainer == null) return;
                 for (int i = 0; i < gameObjectContainer.transform.childCount; i++) {
                     Gizmos.color = Color.white;
-                    Gizmos.DrawWireCube(gameObjectContainer.transform.GetChild(i).transform.position, Vector3.one * voxelScale);
+                    Gizmos.DrawWireCube(gameObjectContainer.transform.GetChild(i).transform.position, Vector3.one * VoxelScale);
                 }
             }
         }
@@ -49,9 +49,9 @@ namespace EL.Dungeon {
             for (int i = 0; i < generatorSize.x; i++) {
                 for (int j = 0; j < generatorSize.y; j++) {
                     for (int k = 0; k < generatorSize.z; k++) {
-                        CreateVoxel(i * (int)voxelScale,
-                                    j * (int)voxelScale,
-                                    k * (int)voxelScale);
+                        CreateVoxel(i * (int)VoxelScale,
+                                    j * (int)VoxelScale,
+                                    k * (int)VoxelScale);
                     }
                 }
             }
@@ -59,8 +59,8 @@ namespace EL.Dungeon {
 
         private void CreateVoxel(int i, int j, int k) {
             GameObject voxel = new GameObject(string.Format("Voxel - ({0}, {1}, {2})", i, j, k));
-            voxel.transform.position = new Vector3(i, j, k);
             voxel.transform.parent = gameObjectContainer.transform;
+            voxel.transform.localPosition = new Vector3(i, j, k);
         }
 
         [ContextMenu("Assign Voxels")]
@@ -89,12 +89,23 @@ namespace EL.Dungeon {
 
             Debug.Log("Voxel::AssignVoxelsToList() | " + min + " : " + max);
 
-            Vector3 size = new Vector3(0.5f * voxelScale, 0.5f * voxelScale, 0.5f * voxelScale);
+            Vector3 size = new Vector3(0.5f * VoxelScale, 0.5f * VoxelScale, 0.5f * VoxelScale);
             bounds = new Bounds((min + max)/2f, ((max + size) - (min - size))); 
         }
 
-        public void RecalculateBounds() {
+        [ContextMenu("Recalculate Bounds")]
+        public void RecalculateBoundsCommand()
+        {
+            RecalculateBounds();
+        }
 
+        public void RecalculateBounds()
+        {
+            if (voxels.Count == 0)
+            {
+                Debug.LogError(gameObject.name + ": the voxels list is empty!");
+                return;
+            }
             Vector3 min = new Vector3(voxels[0].transform.position.x,
                                       voxels[0].transform.position.y,
                                       voxels[0].transform.position.z);
@@ -117,7 +128,7 @@ namespace EL.Dungeon {
 
             //Debug.Log("Voxel::RecalculateBounds() | " + min + " : " + max);
 
-            Vector3 size = new Vector3(0.5f * voxelScale, 0.5f * voxelScale, 0.5f * voxelScale);
+            Vector3 size = new Vector3(0.5f * VoxelScale, 0.5f * VoxelScale, 0.5f * VoxelScale);
             bounds = new Bounds((min + max) / 2f, ((max + size) - (min - size))); 
         }
         
