@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"json",
+				"json"
+			],
+			[
+				"com",
+				"local_commands"
+			],
+			[
+				"comm",
+				"command_name"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"curre",
+				"current_level"
+			],
+			[
+				"curr",
+				"current_level"
+			],
+			[
+				"level",
+				"levelName"
+			],
+			[
+				"local",
+				"local_commands"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"new",
+				"newVoting"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"getA",
+				"getAllPlayers"
+			],
+			[
 				"tmi",
 				"tmi_client"
 			],
@@ -20,10 +68,6 @@
 				"sockets"
 			],
 			[
-				"comm",
-				"commands"
-			],
-			[
 				"comman",
 				"commands"
 			],
@@ -32,16 +76,8 @@
 				"commands"
 			],
 			[
-				"com",
-				"commands"
-			],
-			[
 				"pre",
 				"prepareCommand"
-			],
-			[
-				"fun",
-				"function"
 			],
 			[
 				"scr",
@@ -62,10 +98,6 @@
 			[
 				"add",
 				"addChild"
-			],
-			[
-				"pro",
-				"prototype"
 			],
 			[
 				"use",
@@ -151,16 +183,70 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 1166,
+				"buffer_size": 1479,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "config.js",
+			"file": "src/server/commands/debug_command.js",
 			"settings":
 			{
-				"buffer_size": 928,
+				"buffer_size": 529,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/commands/command.js",
+			"settings":
+			{
+				"buffer_size": 2210,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/overworld/vote.js",
+			"settings":
+			{
+				"buffer_size": 1203,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/gamestate.js",
+			"settings":
+			{
+				"buffer_size": 776,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/battle_level.js",
+			"settings":
+			{
+				"buffer_size": 355,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/overworld/overworld_level.js",
+			"settings":
+			{
+				"buffer_size": 641,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/game_level.js",
+			"settings":
+			{
+				"buffer_size": 1781,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -169,35 +255,25 @@
 			"file": "src/server/socketserver.js",
 			"settings":
 			{
-				"buffer_size": 1357,
+				"buffer_size": 2023,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/server/commands/attack.js",
+			"file": "src/server/jsonrequest.js",
 			"settings":
 			{
-				"buffer_size": 562,
+				"buffer_size": 334,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/server/commands/echo.js",
+			"file": "Usefull things to remember.txt",
 			"settings":
 			{
-				"buffer_size": 233,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/server/commands/ping.js",
-			"settings":
-			{
-				"buffer_size": 149,
-				"encoding": "UTF-8",
+				"buffer_size": 798,
 				"line_ending": "Windows"
 			}
 		}
@@ -209,10 +285,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
-		"last_filter": "install ",
+		"height": 58.0,
+		"last_filter": "command",
 		"selected_items":
 		[
+			[
+				"command",
+				"Snippet: Twitchbot_command"
+			],
 			[
 				"install ",
 				"Package Control: Install Package"
@@ -282,22 +362,29 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/twitchrpg/config.js",
+		"/C/Projects/twitchrpg/src/server/commands/ping.js",
+		"/C/Projects/twitchrpg/src/server/overworld/overworld_vote.js",
+		"/C/Projects/twitchrpg/src/server/overworld_level.js",
+		"/C/Projects/twitchrpg/src/server/commands/command.js",
+		"/C/Projects/twitchrpg/src/server/accounts/user.js",
+		"/C/Projects/twitchrpg/src/server/commands/attack.js",
+		"/C/Projects/twitchrpg/src/server/commands/echo.js",
+		"/C/Projects/twitchrpg/package.json",
+		"/C/Projects/twitchrpg/Usefull things to remember.txt",
+		"/C/Projects/NanaDesigner/.gitignore",
 		"/C/Projects/count.txt",
 		"/C/Projects/twitchrpg/networktest.js",
-		"/C/Projects/twitchrpg/Usefull things to remember.txt",
 		"/C/Projects/twitchrpg/src/server/message_parser.js",
-		"/C/Projects/twitchrpg/src/server/accounts/user.js",
 		"/C/Projects/twitchrpg/src/server/accounts/users.json",
 		"/C/Projects/twitchrpg/node_modules/socket.io/lib/index.js",
 		"/C/Users/maiko/AppData/Local/Temp/Rar$DIa0.946/server.js",
 		"/C/Projects/twitchrpg/servertest.js",
 		"/C/Projects/mc fisher/index.js",
 		"/C/Projects/twitchrpg/index.js",
-		"/C/Projects/twitchrpg/config.js",
 		"/C/Projects/twitchrpg/src/server/socketserver.js",
 		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity.REMOTE.unity",
 		"/C/Projects/twitchrpg/src/TwitchRPG/Assets/Scenes/battle.unity",
-		"/C/Projects/twitchrpg/package.json",
 		"/C/Projects/twitchrpg/src/core/commands/echo.js",
 		"/C/Projects/twitchrpg/src/core/commands/attack.js",
 		"/C/Projects/twitchrpg/src/core/commands/command.js",
@@ -402,14 +489,7 @@
 		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/src/states/traintimer.js",
 		"//studentdav.hku.nl@SSL/DavWWWRoot/public_html/hku/Project_Context/bower_components/Kiwi.js/templateGame/lib/prevent_default.js",
 		"/C/Users/maiko/OneDrive/HKU/ISA/logboek.txt",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/KillOnPlant.nut",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/list_entities.nut",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/debug_commands.cfg",
-		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/vscripts/debug/DelayCode.nut",
-		"/C/Users/maiko/Documents/CSGO Maps/vscript maps/scripts/vscripts/fortwars/fortwars.nut",
-		"/D/Games/Curse/Minecraft/Instances/FTB Presents Direwolf20 1.10/saves/New World/opencomputers/0c29fe3a-201a-4e7a-bcc1-0266ece6e9a3/home/forward",
-		"/C/Users/maiko/OneDrive/HKU/Pr_context/bower_components/Kiwi.js/templateGame/src/game.js"
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg"
 	],
 	"find":
 	{
@@ -420,6 +500,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"<project>",
 			"Current"
 		]
 	},
@@ -428,6 +509,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"./src/server/overworld/overworld_level.js",
+			"./src/server/overworld_level.js",
+			"overworld_level",
 			"already exists",
 			"mp",
 			"commands",
@@ -454,6 +538,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"battle_level",
 			"message_parser",
 			"command",
 			"command_name",
@@ -473,7 +558,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -482,45 +567,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1166,
+						"buffer_size": 1479,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								102,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 928,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								115,
-								115
+								723,
+								723
 							]
 						],
 						"settings":
@@ -537,20 +592,77 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/server/socketserver.js",
+					"buffer": 1,
+					"file": "src/server/commands/debug_command.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1357,
+						"buffer_size": 529,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1023,
-								1023
+								377,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/server/commands/command.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2198,
+								2205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 576.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/server/overworld/vote.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1203,
+								1203
 							]
 						],
 						"settings":
@@ -565,50 +677,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/server/commands/attack.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 562,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								562,
-								562
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "src/server/commands/echo.js",
+					"file": "src/server/gamestate.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 233,
+						"buffer_size": 776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								221,
-								221
+								399,
+								399
 							]
 						],
 						"settings":
@@ -619,24 +701,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/server/commands/ping.js",
+					"file": "src/server/battle_level.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								198,
+								198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/server/overworld/overworld_level.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
 							]
 						],
 						"settings":
@@ -648,6 +758,119 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/server/game_level.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/server/socketserver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								856,
+								856
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/server/jsonrequest.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4,
+								4
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Usefull things to remember.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								701,
+								752
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

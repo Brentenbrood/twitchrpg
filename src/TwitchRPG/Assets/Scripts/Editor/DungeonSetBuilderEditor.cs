@@ -96,6 +96,8 @@ public class DungeonSetBuilderEditor : Editor
             GameObject[] ignores = SetBuilder.IgnoreList;
             List<Room> rooms = new List<Room>(SetBuilder.transform.childCount);
             List<Door> doors = new List<Door>();
+            List<Room> spawns = new List<Room>();
+            List<Room> bossRooms = new List<Room>();
 
             foreach (Transform transform in SetBuilder.transform)
             {
@@ -115,7 +117,12 @@ public class DungeonSetBuilderEditor : Editor
                     {
                         CheckRoom(room);
                         room.GetComponent<Volume>().RecalculateBounds();
-                        rooms.Add(room);
+                        if(room is SpawnRoom)
+                            spawns.Add(room);
+                        else if(room is BossRoom)
+                            bossRooms.Add(room);
+                        else
+                            rooms.Add(room);
                     }
                 }
                 catch (Exception e)
@@ -131,6 +138,8 @@ public class DungeonSetBuilderEditor : Editor
 
             dungeonSet.roomTemplates = rooms;
             dungeonSet.doors = doors;
+            dungeonSet.bosses = bossRooms;
+            dungeonSet.spawns = spawns;
 
             AssetDatabase.SaveAssets();
 
@@ -180,7 +189,7 @@ public class DungeonSetBuilderEditor : Editor
         {
             if (!volume.voxels.Contains(tr.gameObject))
                 throw new Exception(tr.GetPath() + ": is not assigned in volume: '" + volume.GetPath() + "'");
-            if (!Regex.IsMatch(tr.name, " - \\((\\d+), (\\d+), (\\d+)\\)$"))
+            if (!Regex.IsMatch(tr.name, @" - \((\d+), (\d+), (\d+)\)$"))
                 Debug.LogWarning("There are gameobjects inside of gameObjectContainer which do not appear to be a voxel");
         }
 
@@ -193,7 +202,7 @@ public class DungeonSetBuilderEditor : Editor
                 throw new Exception(room.GetPath() + ": contains the door: '" + door.GetPath() + "' But it is not assigned in the list");
             if(!door.voxelOwner)
                 throw new Exception(door.GetPath() + ": does not have voxelOwner assigned");
-            if(!Regex.IsMatch(door.voxelOwner.name, " - \\((\\d+), (\\d+), (\\d+)\\)$"))
+            if(!Regex.IsMatch(door.voxelOwner.name, @" - \((\d+), (\d+), (\d+)\)$"))
                 Debug.Log(door.GetPath() + "'s VoxelOwner does not appear to be a voxel");
 
             //TODO: Write test to check if the direction is not inside itself

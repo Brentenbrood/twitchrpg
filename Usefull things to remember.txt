@@ -11,3 +11,10 @@ Om in node te debuggen met Chrome, start met:
 	node --inspect index.js
 Om niet steeds de link te hoeven kopieren naar chrome dan kan je naar deze link gaan als 'hub':
 	about:inspect
+
+In javascript om een 'constructor' functie te maken die een object maakt als je de functie aanroept en als je new op de functie roept. kan dit:
+	function Server(){
+		if (!(this instanceof Server)) return new Server();
+		//do some shit
+	}
+	module.exports = Server;

@@ -1,11 +1,13 @@
 var net = require('net');
 var user = require('./accounts/user.js');
+var jsonrequest = require('./jsonrequest.js');
+
 var socketserver = {};
 module.exports = socketserver;
 
 socketserver.clients = [];
 
-var server = net.createServer(function (socket) {
+var onConnection = function (socket) {
     console.log('client connected');
 
     socket.id = socket.remoteAddress + ":" + socket.remotePort;
@@ -14,19 +16,29 @@ var server = net.createServer(function (socket) {
     socket.on('data', function(data){
     	console.log("received data: '" + data + "'")
 		data = data.toString('utf8');
-    	switch(data){
-			case "getallplayers":
-				var players = user.getAll();
-				socket.write(players);
-				break;
-			default:
-				socketserver.broadcast('yes! I received: ' + data);
-				break;
+
+		try{
+			var json = JSON.parse(data);
+			var request = new jsonrequest(json["type"], json["data"], json["request"]);
+
+			//TODO: Add a similar system that the C# SocketConnection has with a dictionary of responder objects
+	    	switch(data){
+				case "getallplayers":
+					var players = user.getAll();
+					socket.write(players);
+					break;
+				default:
+					var response = new jsonrequest(request.type, {"default": "unrecognised command"}, false);
+					socketserver.broadcast(response.getJSON());
+					break;
+			}
+		}catch(err){
+			//okay its not a valid json request, so we scream in the console!
+			console.error("The folowing request is not a valid jsonrequest! please fix fast schnell: " + data);
 		}
+	});
 
-    });
-
-    socket.on("end", function(){
+	socket.on("end", function(){
     	var index = socketserver.clients.indexOf(socket);
     	if(index == -1){
         	console.log("unknown client disconnected: " + socket.id);
@@ -37,10 +49,12 @@ var server = net.createServer(function (socket) {
 
     });
 
-    socket.write("Hello sir!");
+    //socket.write("Hello sir!");
+    var request = new jsonrequest("test", {"sometest": 123}, false);
+    socket.write(request.getJSON());
+};
 
-    //socket.pipe(socket);
-});
+var server = net.createServer(onConnection);
 
 server.on('error', (err) => {
     throw err;

@@ -8,6 +8,14 @@ config = require('./config.js');
 //This is creating our client connection with settings.
 client = new tmi.client(config.options);
 var message_parser = require('./src/server/message_parser.js')(client);
+
+gamestate = require('./src/server/gamestate.js');
+var overworld_level = require('./src/server/overworld/overworld_level.js')();
+var battle_level = require('./src/server/battle_level.js')();
+gamestate.addLevel(overworld_level);
+gamestate.addLevel(battle_level);
+gamestate.switchLevel(overworld_level.levelName);
+
 //This connects to the twitch.
 client.connect();
 

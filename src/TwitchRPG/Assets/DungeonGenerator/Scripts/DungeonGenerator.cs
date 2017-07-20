@@ -35,14 +35,17 @@ public class DungeonGenerator : MonoBehaviour {
 
     public GameObject startRoom;
     public static int roomsCalledStart = 0;
+
+    public bool UseEnumaration = true;
     public float GenerationDelay = 0.5f;
-    
 
     public bool generateWithTimer = true;
     [Tooltip("In miliseconds")] public int MaxGenerationTime = 1500;
     private Stopwatch stopwatch = new Stopwatch();
 
-	void Start () {
+    public GameObject WalkerPrefab;
+
+    void Start () {
         
         //instance = this;
         if (randomizeSeedOnStart) {
@@ -75,7 +78,9 @@ public class DungeonGenerator : MonoBehaviour {
 
         Debug.Log( "Generated in: " + stopwatch.ElapsedMilliseconds + "ms");
     }
-    private IEnumerator StartGeneration() {
+    private IEnumerator StartGeneration()
+    {
+        yield return null;
         DDebugTimer.Start();
         stopwatch.Start();
         generationComplete = false;
@@ -98,10 +103,19 @@ public class DungeonGenerator : MonoBehaviour {
             stopwatch.Reset();
 
             GenerateNextRoom();
-            yield return new WaitForSeconds(GenerationDelay);
+            if(UseEnumaration)
+                yield return new WaitForSeconds(GenerationDelay);
 
             stopwatch.Start();
         }
+
+        //TODO: Do a pass on all rooms to try to replace dead ends with room that connect them
+
+        //Init the player/walker
+        SpawnRoom spawnRoom = startRoom.GetComponent<SpawnRoom>();
+        GameObject walker = Instantiate(WalkerPrefab, spawnRoom.SpawnPosition.position, spawnRoom.SpawnPosition.rotation);
+        var controller = walker.GetComponent<TwitchPlayerController>();
+        controller.TargetDoor = spawnRoom.doors[0];
 
         //process doors
         for (int i = 0; i < rooms.Count; i++) {
@@ -129,11 +143,13 @@ public class DungeonGenerator : MonoBehaviour {
         Room lastRoom = startRoom.GetComponent<Room>();
         if (openSet.Count > 0) lastRoom = openSet[0];
 
-        Debug.Log(lastRoom);
-        Vector3 cameraPosition = Camera.main.transform.position;
-        cameraPosition.x = lastRoom.transform.position.x;
-        cameraPosition.z = lastRoom.transform.position.z;
-        Camera.main.transform.position = cameraPosition;
+        if (UseEnumaration && Camera.main)
+        {
+            Vector3 cameraPosition = Camera.main.transform.position;
+            cameraPosition.x = lastRoom.transform.position.x;
+            cameraPosition.z = lastRoom.transform.position.z;
+            Camera.main.transform.position = cameraPosition;
+        }
 
         //create a mutable list of all possible rooms
         List<Room> possibleRooms = new List<Room>();
