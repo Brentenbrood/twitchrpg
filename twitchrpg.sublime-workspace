@@ -210,7 +210,7 @@
 			"file": "src/server/overworld/vote.js",
 			"settings":
 			{
-				"buffer_size": 1203,
+				"buffer_size": 1202,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -654,15 +654,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1203,
+						"buffer_size": 1202,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1203,
-								1203
+								597,
+								597
 							]
 						],
 						"settings":

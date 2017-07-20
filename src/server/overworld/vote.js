@@ -20,7 +20,7 @@ vote.execute = function(args, userdata){
 				var request = new jsonrequest("AddVote", {"direction": "forward"}, true);
 				socketserver.broadcast(request.getJSON());
 				break;
-			case "backwards":
+			case "backward":
 				client.say(config.channel, "Sending backwards...");
 				var request = new jsonrequest("AddVote", {"direction": "backward"}, true);
 				socketserver.broadcast(request.getJSON());
