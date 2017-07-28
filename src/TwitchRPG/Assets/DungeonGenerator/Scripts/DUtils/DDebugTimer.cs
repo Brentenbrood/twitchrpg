@@ -26,4 +26,10 @@ public static class DDebugTimer {
         before = now;
         return diff;
     }
+
+    public static int TimePassed()
+    {
+        int diff = DateTime.Now.Subtract(before).Milliseconds;
+        return diff;
+    }
 }

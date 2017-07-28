@@ -156,8 +156,8 @@ namespace SimpleJSON
             get
             {
                 foreach (var C in Children)
-                    foreach (var D in C.DeepChildren)
-                        yield return D;
+                foreach (var D in C.DeepChildren)
+                    yield return D;
             }
         }
 
@@ -514,14 +514,14 @@ namespace SimpleJSON
                                     Token.Append('\f');
                                     break;
                                 case 'u':
-                                    {
-                                        string s = aJSON.Substring(i + 1, 4);
-                                        Token.Append((char)int.Parse(
-                                            s,
-                                            System.Globalization.NumberStyles.AllowHexSpecifier));
-                                        i += 4;
-                                        break;
-                                    }
+                                {
+                                    string s = aJSON.Substring(i + 1, 4);
+                                    Token.Append((char)int.Parse(
+                                        s,
+                                        System.Globalization.NumberStyles.AllowHexSpecifier));
+                                    i += 4;
+                                    break;
+                                }
                                 default:
                                     Token.Append(C);
                                     break;
@@ -633,45 +633,45 @@ namespace SimpleJSON
             switch (type)
             {
                 case JSONNodeType.Array:
-                    {
-                        int count = aReader.ReadInt32();
-                        JSONArray tmp = new JSONArray();
-                        for (int i = 0; i < count; i++)
-                            tmp.Add(Deserialize(aReader));
-                        return tmp;
-                    }
+                {
+                    int count = aReader.ReadInt32();
+                    JSONArray tmp = new JSONArray();
+                    for (int i = 0; i < count; i++)
+                        tmp.Add(Deserialize(aReader));
+                    return tmp;
+                }
                 case JSONNodeType.Object:
+                {
+                    int count = aReader.ReadInt32();
+                    JSONObject tmp = new JSONObject();
+                    for (int i = 0; i < count; i++)
                     {
-                        int count = aReader.ReadInt32();
-                        JSONObject tmp = new JSONObject();
-                        for (int i = 0; i < count; i++)
-                        {
-                            string key = aReader.ReadString();
-                            var val = Deserialize(aReader);
-                            tmp.Add(key, val);
-                        }
-                        return tmp;
+                        string key = aReader.ReadString();
+                        var val = Deserialize(aReader);
+                        tmp.Add(key, val);
                     }
+                    return tmp;
+                }
                 case JSONNodeType.String:
-                    {
-                        return new JSONString(aReader.ReadString());
-                    }
+                {
+                    return new JSONString(aReader.ReadString());
+                }
                 case JSONNodeType.Number:
-                    {
-                        return new JSONNumber(aReader.ReadDouble());
-                    }
+                {
+                    return new JSONNumber(aReader.ReadDouble());
+                }
                 case JSONNodeType.Boolean:
-                    {
-                        return new JSONBool(aReader.ReadBoolean());
-                    }
+                {
+                    return new JSONBool(aReader.ReadBoolean());
+                }
                 case JSONNodeType.NullValue:
-                    {
-                        return new JSONNull();
-                    }
+                {
+                    return new JSONNull();
+                }
                 default:
-                    {
-                        throw new Exception("Error deserializing JSON. Unknown tag: " + type);
-                    }
+                {
+                    throw new Exception("Error deserializing JSON. Unknown tag: " + type);
+                }
             }
         }
 
@@ -1113,11 +1113,11 @@ namespace SimpleJSON
         private static bool IsNumeric(object value)
         {
             return value is int || value is uint
-                || value is float || value is double
-                || value is decimal
-                || value is long || value is ulong
-                || value is short || value is ushort
-                || value is sbyte || value is byte;
+                   || value is float || value is double
+                   || value is decimal
+                   || value is long || value is ulong
+                   || value is short || value is ushort
+                   || value is sbyte || value is byte;
         }
         public override bool Equals(object obj)
         {

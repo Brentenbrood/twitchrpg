@@ -9,5 +9,5 @@ echo.execute = function(args, userdata){
 		total += args[i] + " ";
 	}
 
-	client.say("BRENTOLINNI", total);
+	client.say(config.channel, total);
 };

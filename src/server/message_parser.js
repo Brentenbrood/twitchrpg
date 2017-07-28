@@ -2,27 +2,31 @@ var user = require("./accounts/user.js");
 var commands = require("./commands/command.js");
 
 var message_parser = {};
-module.exports = message_parser;
+module.exports = function(tmi_client){
+	if(typeof tmi_client !== 'undefined' && tmi_client !== null){
+		message_parser.init(tmi_client);
+	}
 
-//aliases
-var mp = message_parser;
+	return message_parser;
+};
 
 //variable declarations
 message_parser.prefix = "!";
 
 //function implementations
-message_parser.init = function(client){
-	client.on('chat', mp.onChat);
-};
+message_parser.init = function(tmi_client){
+	tmi_client.on('chat', message_parser.onChat);
+}
 
 /**
- * @param channel {string}
+ * Callback for a chat message event
+ * @param channel {string} the channel the message came from
  * @param userstate {object} the userstate object https://docs.tmijs.org/v1.2.1/Events.html#chat
- * @param message {string} 
- * @param self {boolean} is the command send out by this bot?
+ * @param message {string} the message
+ * @param fromSelf {boolean} is the command send out by this bot?
  */
-message_parser.onChat = function(channel, userstate, message, self){
-	if(self)
+message_parser.onChat = function(channel, userstate, message, fromSelf){
+	if(fromSelf)
 		return;
 
 	var id = userstate['user-id'];
@@ -30,19 +34,20 @@ message_parser.onChat = function(channel, userstate, message, self){
 		user.add(userstate);
 	}
 
-	if(message.startsWith(mp.prefix)){
-		var cmd = mp.prepareCommand(message);
+	if(message.startsWith(message_parser.prefix)){
+		var cmd = message_parser.prepareCommand(message);
 		commands.execute(cmd.command, cmd.args, userstate);
 	}
 };
 
 /**
- * plits up the chat message into usable pieces for the command system
+ * Splits up the chat message into usable pieces for the command system
  * @param message {string} 
  * @return {object} with the properties: 'commmand' and 'args'
  */
 message_parser.prepareCommand = function(message){
-	var full_command = message.substring(mp.prefix.length);
+	//TODO: Take a look at the nodejs module 'minimist' for implementing arguments and optional arguments
+	var full_command = message.substring(message_parser.prefix.length);
 	var args = full_command.split(' ');
 	if(args.length > 0){
 		var command = args[0];

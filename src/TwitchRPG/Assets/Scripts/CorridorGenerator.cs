@@ -100,6 +100,33 @@ namespace Generators
             CreateWorldGeometry();
         }
 
+        void GeneratePoints()
+        {
+            for (int i = 0; i < points.Length;)
+            {
+                int x = Random.Range(0, map.Width);
+                int y = Random.Range(0, map.Height);
+
+                if (!PointExists(x, y))
+                {
+                    map.Set(x, y, 1);
+                    points[i] = new Point(x, y);
+                    i++;
+                }
+            }
+        }
+
+        bool PointExists(int x, int y)
+        {
+            foreach (Point point in points)
+            {
+                if (point.X == x && point.X == y)
+                    return true;
+            }
+
+            return false;
+        }
+
         private void ConnectPoints()
         {
             List<Point>[] connectedPoints = new List<Point>[points.Length];
@@ -149,13 +176,12 @@ namespace Generators
 
             Point[] sortingPoints = new Point[points.Length];
             Array.Copy(points, sortingPoints, points.Length);
-            Array.Sort(sortingPoints, new SortByDistance(new Point(x, y)));
+            Array.Sort(sortingPoints, new SortByDistance(fromPoint));
 
             List<Point> pointsWithin = new List<Point>();
             for (int i = 0; i < sortingPoints.Length && pointsWithin.Count < radiusPerPoint.Length; i++)
             {
                 Point toPoint= sortingPoints[i];
-                
 
                 if (Vector2.Distance(fromVector2, new Vector2(toPoint.X, toPoint.Y)) <= radiusPerPoint[pointsWithin.Count] && toPoint != fromPoint )
                 {
@@ -164,33 +190,6 @@ namespace Generators
             }
 
             return pointsWithin;
-        }
-
-        void GeneratePoints()
-        {
-            for (int i = 0; i < points.Length; )
-            {
-                int x = Random.Range(0, map.Width);
-                int y = Random.Range(0, map.Height);
-
-                if (!PointExists(x, y))
-                {
-                    map.Set(x, y, 1);
-                    points[i] = new Point(x, y);
-                    i++;
-                }
-            }
-        }
-
-        bool PointExists(int x, int y)
-        {
-            foreach (Point point in points)
-            {
-                if (point.X == x && point.X == y)
-                    return true;
-            }
-
-            return false;
         }
 
         bool CreateCorridor(Point a, Point b)
@@ -236,6 +235,7 @@ namespace Generators
             return true;
 
             //check horizontal path
+#pragma warning disable CS0162 // Unreachable code detected
             for (int x = Mathf.Min(a.X, b.X); x < Mathf.Max(a.X, b.X); x++)
                 if (map.Get(x, a.Y) != 0 && (a.X != x || b.X != x))
                     return false;
@@ -246,6 +246,7 @@ namespace Generators
                     return false;
 
             return true;
+#pragma warning restore CS0162 // Unreachable code detected
         }
 
         bool CreateVerticalCorridor(Point a, Point b)
@@ -273,6 +274,7 @@ namespace Generators
             return true;
 
             //check vertical path
+#pragma warning disable CS0162 // Unreachable code detected
             for (int y = Mathf.Min(a.Y, b.Y); y < Mathf.Max(a.Y, b.Y); y++)
                 if (map.Get(a.X, y) != 0 && (a.Y != y || b.Y != y))
                     return false;
@@ -283,16 +285,17 @@ namespace Generators
                     return false;
 
             return true;
+#pragma warning restore CS0162 // Unreachable code detected
         }
 
         void Update()
         {
-            Point start = points[0];
+            /*Point start = points[0];
             foreach (Point point in points)
             {
                 //Debug.DrawLine(new Vector3(start.X, 0f, start.Y), new Vector3(point.X, 0f, point.Y), UnityEngine.Color.red, 0f, false);
                 start = point;
-            }
+            }*/
         }
 
         void CreateWorldGeometry()

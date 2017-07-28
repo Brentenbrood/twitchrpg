@@ -3,7 +3,8 @@
 var all_commands = [
 	require('./echo.js'),
 	require('./ping.js'),
-    require('./attack.js')
+    require('./attack.js'),
+    require('./debug_command.js')
 ];
 
 var command = {};
@@ -27,13 +28,37 @@ command.remove = function(command_name){
 	delete command.list[command_name];
 };
 
+command.get = function(command_name){
+	if(command.isRegistered(command_name))
+		return command.list[command_name];
+
+	console.warn("trying to get a command with name: '" + command_name + "' but it is not registered");
+	return null;
+};
+
 command.isRegistered = function(command_name){
 	return command.list.hasOwnProperty(command_name);
 };
 
+//global command methods
+command.isCurrentlyRegistered = function(command_name){
+	return gamestate.current_level.local_commands.hasOwnProperty(command_name) ||
+		command.isRegistered(command_name);
+}
+
+command.getAvailableCommand = function(command_name){
+	//TODO: Make this not have a double check
+	if(command.isCurrentlyRegistered(command_name))
+		return gamestate.current_level.local_commands.hasOwnProperty(command_name) ? 
+			gamestate.current_level.local_commands[command_name] : command.get(command_name);
+
+	console.warn("trying to get a command with name: '" + command_name + "' but it is not registered");
+	return null;
+}
+
 command.execute = function(command_name, args, userstate){
-	if(command.isRegistered(command_name)){
-		var callback = command.list[command_name];
+	if(command.isCurrentlyRegistered(command_name)){
+		var callback = command.getAvailableCommand(command_name);
 		callback(args, userstate);
 	}else{
 		console.log("%s tried to execute the command_name: \"%s\", but it is not valid", userstate.username, command_name);
