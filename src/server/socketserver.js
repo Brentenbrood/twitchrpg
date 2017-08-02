@@ -20,12 +20,14 @@ var onConnection = function (socket) {
 		try{
 			var json = JSON.parse(data);
 			var request = new jsonrequest(json["type"], json["data"], json["request"]);
+			console.log(request.type);
 
 			//TODO: Add a similar system that the C# SocketConnection has with a dictionary of responder objects
-	    	switch(data){
-				case "getallplayers":
+	    	switch(request.type){
+				case "GetAllPlayers":
 					var players = user.getAll();
-					socket.write(players);
+                    var response = new jsonrequest(players.type, {"players": players.players}, players.request);
+                    socketserver.broadcast(response.getJSON());
 					break;
 				default:
 					var response = new jsonrequest(request.type, {"default": "unrecognised command"}, false);

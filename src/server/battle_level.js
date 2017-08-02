@@ -5,6 +5,11 @@ var battle_level = function(){
 	if (!(this instanceof battle_level)) return new battle_level();
 
 	this.levelName = "battle";
+    var self = this;
+    var commands = [require('./battle/attack.js')(this)];
+    commands.forEach(function(cmd){
+        self.local_commands[cmd.command_name] = cmd.execute;
+    });
 };
 module.exports = battle_level;
 

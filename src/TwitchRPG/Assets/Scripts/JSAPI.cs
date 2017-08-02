@@ -24,6 +24,13 @@ public static class JSAPI
         Connection.SendRequest(request);
         return request;
     }
+    public static TwitchBotRequest GetAllPlayers()
+    {
+        JsonRequest jsonRequest = new JsonRequest("GetAllPlayers");
+        TwitchBotRequest request = new TwitchBotRequest(jsonRequest);
+        Connection.SendRequest(request);
+        return request;
+    }
 }
 
 public class TwitchBotRequest : CustomYieldInstruction

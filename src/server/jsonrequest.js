@@ -3,8 +3,8 @@ var jsonrequest = function(type, data = {}, request = true){
 
 	if(typeof type === 'string'){
 		this.type = type;
-		this.request = request;
 		this.data = data;
+        this.request = request;
 	}
 }
 

@@ -3,7 +3,7 @@
 var all_commands = [
 	require('./echo.js'),
 	require('./ping.js'),
-    require('./attack.js'),
+    require('../battle/attack.js'),
     require('./debug_command.js')
 ];
 

@@ -4,7 +4,7 @@ var user = { };
 module.exports = user;
 
 user.check = function(userstate){
-    for (var user_id in users.data) {
+    for (var user_id in users.players) {
         if(userstate["user-id"] == user_id) {
             //console.log(userstate["user-id"] + " already exists");
             return false;
@@ -13,7 +13,7 @@ user.check = function(userstate){
     return true;
 };
 user.add = function(userstate){
-    users.data[userstate["user-id"]] = {
+    users.players[userstate["user-id"]] = {
         "name": userstate["display-name"],
         "level": 1,
         "attack": 20,
@@ -29,13 +29,12 @@ user.add = function(userstate){
         });
 };
 user.update = function(values){
-    users.data[userstate["user-id"]] = {
+    users.players[userstate["user-id"]] = {
         "level": values.xp,
         "xp": values.xp
     };
 };
 user.getAll = function(){
-    var data = JSON.stringify(users);
-    console.log(users);
+    var data = users;
     return data;
 };
