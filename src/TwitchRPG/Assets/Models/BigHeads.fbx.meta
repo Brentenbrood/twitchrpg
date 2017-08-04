@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 14a32c2c209c34e428472b6f5ae5d502
+timeCreated: 1501794852
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BigHead_base
+    100002: BigHeads
+    100004: //RootNode
+    100006: BigHeads floor
+    100008: BigHeads Footsteps
+    100010: BigHeads Head
+    100012: BigHeads HeadNub
+    100014: BigHeads L Calf
+    100016: BigHeads L Clavicle
+    100018: BigHeads L Finger0
+    100020: BigHeads L Finger01
+    100022: BigHeads L Finger0Nub
+    100024: BigHeads L Finger1
+    100026: BigHeads L Finger11
+    100028: BigHeads L Finger1Nub
+    100030: BigHeads L Finger2
+    100032: BigHeads L Finger21
+    100034: BigHeads L Finger2Nub
+    100036: BigHeads L Foot
+    100038: BigHeads L Forearm
+    100040: BigHeads L Hand
+    100042: BigHeads L Thigh
+    100044: BigHeads L Toe0
+    100046: BigHeads L Toe0Nub
+    100048: BigHeads L UpperArm
+    100050: BigHeads Neck
+    100052: BigHeads Pelvis
+    100054: BigHeads R Calf
+    100056: BigHeads R Clavicle
+    100058: BigHeads R Finger0
+    100060: BigHeads R Finger01
+    100062: BigHeads R Finger0Nub
+    100064: BigHeads R Finger1
+    100066: BigHeads R Finger11
+    100068: BigHeads R Finger1Nub
+    100070: BigHeads R Finger2
+    100072: BigHeads R Finger21
+    100074: BigHeads R Finger2Nub
+    100076: BigHeads R Foot
+    100078: BigHeads R Forearm
+    100080: BigHeads R Hand
+    100082: BigHeads R Thigh
+    100084: BigHeads R Toe0
+    100086: BigHeads R Toe0Nub
+    100088: BigHeads R UpperArm
+    100090: BigHeads Spine
+    100092: BigHeads Spine1
+    400000: BigHead_base
+    400002: //RootNode
+    400004: BigHeads
+    400006: BigHeads floor
+    400008: BigHeads Footsteps
+    400010: BigHeads Head
+    400012: BigHeads HeadNub
+    400014: BigHeads L Calf
+    400016: BigHeads L Clavicle
+    400018: BigHeads L Finger0
+    400020: BigHeads L Finger01
+    400022: BigHeads L Finger0Nub
+    400024: BigHeads L Finger1
+    400026: BigHeads L Finger11
+    400028: BigHeads L Finger1Nub
+    400030: BigHeads L Finger2
+    400032: BigHeads L Finger21
+    400034: BigHeads L Finger2Nub
+    400036: BigHeads L Foot
+    400038: BigHeads L Forearm
+    400040: BigHeads L Hand
+    400042: BigHeads L Thigh
+    400044: BigHeads L Toe0
+    400046: BigHeads L Toe0Nub
+    400048: BigHeads L UpperArm
+    400050: BigHeads Neck
+    400052: BigHeads Pelvis
+    400054: BigHeads R Calf
+    400056: BigHeads R Clavicle
+    400058: BigHeads R Finger0
+    400060: BigHeads R Finger01
+    400062: BigHeads R Finger0Nub
+    400064: BigHeads R Finger1
+    400066: BigHeads R Finger11
+    400068: BigHeads R Finger1Nub
+    400070: BigHeads R Finger2
+    400072: BigHeads R Finger21
+    400074: BigHeads R Finger2Nub
+    400076: BigHeads R Foot
+    400078: BigHeads R Forearm
+    400080: BigHeads R Hand
+    400082: BigHeads R Thigh
+    400084: BigHeads R Toe0
+    400086: BigHeads R Toe0Nub
+    400088: BigHeads R UpperArm
+    400090: BigHeads Spine
+    400092: BigHeads Spine1
+    4300000: BigHead_base
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: BigHead_base
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
