@@ -13,13 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Simple set
   spawns:
-  - {fileID: 114272466131635914, guid: 51bc2fbce06c4a64abdf2d8e419890a6, type: 2}
+  - {fileID: 114411413446883240, guid: 51bc2fbce06c4a64abdf2d8e419890a6, type: 2}
   bosses: []
   doors:
-  - {fileID: 114785766322126290, guid: 10ecc353809044b478536cdde2618f9e, type: 2}
+  - {fileID: 114527536200335170, guid: 10ecc353809044b478536cdde2618f9e, type: 2}
   roomTemplates:
-  - {fileID: 114650790809691376, guid: 1f5bcdbdb3cb5574b86386debc1b7839, type: 2}
-  - {fileID: 114282722490665482, guid: 855bea3da97c4ac43baaaa9f08d24998, type: 2}
-  - {fileID: 114547842594183736, guid: 16382a1186c422a4a873acf2676eb4cb, type: 2}
-  - {fileID: 114929530548023982, guid: d27db164e4aad8d468517f579df655a0, type: 2}
-  - {fileID: 114481213920460004, guid: c645d97b1b5b8434a9bbe3bda64726a4, type: 2}
+  - {fileID: 114003234700601232, guid: fbcb3403aa712134b816a469277647b7, type: 2}
+  - {fileID: 114299686306763718, guid: d311c0c9276a589489859d91eab91f5c, type: 2}
+  - {fileID: 114004198162784706, guid: 1f5bcdbdb3cb5574b86386debc1b7839, type: 2}
+  - {fileID: 114296283879935942, guid: ec17f1c6ed40c7845a30498afa14b3d0, type: 2}
+  - {fileID: 114845484757414548, guid: 855bea3da97c4ac43baaaa9f08d24998, type: 2}
+  - {fileID: 114330317593151486, guid: 16382a1186c422a4a873acf2676eb4cb, type: 2}
+  - {fileID: 114177931116374478, guid: e81117ffbbbcdda4dba34c03f2c5d0ea, type: 2}
+  - {fileID: 114952894992180334, guid: bc9bcdc177c3e944683eae9d1ab86faf, type: 2}
+  - {fileID: 114495325159081786, guid: d27db164e4aad8d468517f579df655a0, type: 2}
+  - {fileID: 114574390405178796, guid: c645d97b1b5b8434a9bbe3bda64726a4, type: 2}

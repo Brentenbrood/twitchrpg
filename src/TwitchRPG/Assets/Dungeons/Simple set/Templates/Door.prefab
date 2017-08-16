@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000178727348896}
+  m_RootGameObject: {fileID: 1789821866445218}
   m_IsPrefabParent: 1
---- !u!1 &1000178727348896
+--- !u!1 &1789821866445218
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4041618875063984}
-  - component: {fileID: 114231082866776242}
+  - component: {fileID: 4420880220448130}
+  - component: {fileID: 114527536200335170}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -27,17 +27,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1615626090469766
+--- !u!1 &1966776357670242
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4475513539604130}
-  - component: {fileID: 33907177503974922}
-  - component: {fileID: 65554319658753920}
-  - component: {fileID: 23262332597426642}
+  - component: {fileID: 4676262243340752}
+  - component: {fileID: 33751944863747760}
+  - component: {fileID: 65036473691980494}
+  - component: {fileID: 23168779257707152}
   m_Layer: 0
   m_Name: Cube 5
   m_TagString: Untagged
@@ -45,39 +45,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4041618875063984
+--- !u!4 &4420880220448130
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000178727348896}
+  m_GameObject: {fileID: 1789821866445218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.7680826, y: 0, z: 28.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4475513539604130}
+  - {fileID: 4676262243340752}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4475513539604130
+--- !u!4 &4676262243340752
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615626090469766}
+  m_GameObject: {fileID: 1966776357670242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 5.120811}
   m_Children: []
-  m_Father: {fileID: 4041618875063984}
+  m_Father: {fileID: 4420880220448130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23262332597426642
+--- !u!23 &23168779257707152
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615626090469766}
+  m_GameObject: {fileID: 1966776357670242}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -104,31 +104,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33907177503974922
+--- !u!33 &33751944863747760
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615626090469766}
+  m_GameObject: {fileID: 1966776357670242}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65554319658753920
+--- !u!65 &65036473691980494
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615626090469766}
+  m_GameObject: {fileID: 1966776357670242}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114231082866776242
+--- !u!114 &114527536200335170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000178727348896}
+  m_GameObject: {fileID: 1789821866445218}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5480f0a1ca504781862ca91ef11ad95, type: 3}

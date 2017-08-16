@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//TODO: The filename is different than the interface name, fix-it!
 public interface IResponseProcessor {
     /// <summary>
     /// The name which will be used to see to what response this processor will react

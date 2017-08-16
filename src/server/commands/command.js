@@ -4,7 +4,8 @@ var all_commands = [
 	require('./echo.js'),
 	require('./ping.js'),
     require('../battle/attack.js'),
-    require('./debug_command.js')
+    require('./debug_command.js')/*,
+    require('./alias.js')*/
 ];
 
 var command = {};

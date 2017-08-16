@@ -141,6 +141,8 @@ public class DungeonSetBuilderEditor : Editor
             dungeonSet.bosses = bossRooms;
             dungeonSet.spawns = spawns;
 
+            EditorUtility.SetDirty(dungeonSet);
+
             AssetDatabase.SaveAssets();
 
             set.objectReferenceValue = dungeonSet;

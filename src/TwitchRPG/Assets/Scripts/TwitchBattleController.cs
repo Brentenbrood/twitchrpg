@@ -2,68 +2,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using SimpleJSON;
 using UnityEngine;
 
 public class TwitchBattleController : MonoBehaviour, IResponseProcessor
 {
-    public bool CurrentlyCollecting;
-    public float VotingTime = 15f;
-    public float FetchTime = 3f;
     public BattlePanel battlepanel;
-    public List<GameObject> players = new List<GameObject>();
+    public List<TwitchFighter> players = new List<TwitchFighter>();
     public GameObject humanPrefab;
 
-    public TwitchOverworldUI UI;
+    public TwitchBattleUI UI;
 
-    void Start()
+    IEnumerator Start()
     {
-        UI = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<TwitchOverworldUI>();
-        StartGettingPlayers();
+        //UI = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<TwitchOverworldUI>();
+        //StartGettingPlayers();
+        TwitchBotRequest playerRequest = JSAPI.GetAllPlayers();
+        yield return playerRequest;
+        PopulatePlayerList(playerRequest.Response);
+
+        battlepanel.SetVisible(true);
     }
 
     void Update()
     {
-
-        if (CurrentlyCollecting)
-        {
-            
-        } else
-        {
-            
-        }
-    }
-
-    private void StartGettingPlayers()
-    {
-        CurrentlyCollecting = true;
-        //UI.VotingPanel.StartVoting(possibleDoors.Keys.ToArray());
-
-        StartCoroutine(GetPlayers());
-    }
-
-    private IEnumerator GetPlayers()
-    {
-        float startTime = Time.time;
-        SocketConnection.Instance.AddResponder(this);
-        TwitchBotRequest botRequest = JSAPI.GetAllPlayers();
         
-        CurrentlyCollecting = false;
-        while (startTime + VotingTime > Time.time)
-        {
-            yield return botRequest;
-        }
-
-        CurrentlyCollecting = false;
-        battlepanel.SetVisible(true);
-        SocketConnection.Instance.RemoveReponder(this);
-        yield return botRequest;
     }
+
+//    private void StartGettingPlayers()
+//    {
+//        //CurrentlyCollecting = true;
+//        //UI.VotingPanel.StartVoting(possibleDoors.Keys.ToArray());
+//
+//        StartCoroutine(GetPlayers());
+//
+//    }
+
+//    private IEnumerator GetPlayers()
+//    {
+//        float startTime = Time.time;
+//        SocketConnection.Instance.AddResponder(this);
+//        TwitchBotRequest botRequest = JSAPI.GetAllPlayers();
+//        
+//        while (startTime > Time.time)
+//        {
+//            yield return botRequest;
+//        }
+//
+//        battlepanel.SetVisible(true);
+//        SocketConnection.Instance.RemoveReponder(this);
+//        yield return botRequest;
+//    }
+
     public void PopulatePlayerList(JsonRequest json)
     {
         //Debug.Log(json.data["players"]);
         //SimpleJSON.JSONObject data = ;
         //Debug.Log(data);
-        var players = json.data["players"].AsObject;
+        JSONObject players = json.data["players"].AsObject;
         Debug.Log(players);
         /*foreach (SimpleJSON.JSONNode p in data)
         {
@@ -79,12 +75,12 @@ public class TwitchBattleController : MonoBehaviour, IResponseProcessor
         for (int i = 0; i < players.Count; i++)
         {
             string playerKey = (string)players[i];
-            SimpleJSON.JSONObject p = (SimpleJSON.JSONObject)players[i];
-            PlayerData player = new PlayerData();
-            player.name = p["name"].Value;
-            player.attack = p["attack"].AsInt;
-            player.level = p["level"].AsInt;
-            player.xp = p["xp"].AsInt;
+            JSONObject p = players[i].AsObject;
+            PlayerData player = new PlayerData(p);
+//            player.name = p["name"].Value;
+//            player.attack = p["attack"].AsInt;
+//            player.level = p["level"].AsInt;
+//            player.xp = p["xp"].AsInt;
             Debug.Log(p["name"].Value);
             SpawnPlayer(player);
             //Debug.Log(playerData);
@@ -92,11 +88,15 @@ public class TwitchBattleController : MonoBehaviour, IResponseProcessor
         }
 
     }
+
     public void SpawnPlayer(PlayerData player)
     {
-        //GameObject human = Instantiate(humanPrefab, transform.position, transform.rotation) as GameObject;
-        //players.Add(human);
+        GameObject human = Instantiate(humanPrefab, transform.position, transform.rotation);
+        TwitchFighter fighter = human.GetComponent<TwitchFighter>();
+        fighter.Init(player);
+        players.Add(fighter);
     }
+
     public string TypeName { get { return "playerlist"; } }
 
     public bool ProcessResponse(JsonRequest response)

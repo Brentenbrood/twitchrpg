@@ -1,13 +1,7 @@
-//TODO: Create 4 direct commands: !left !right !forward !back
-
+var alias = require('./../commands/alias.js');
 var jsonrequest = require('./../jsonrequest.js');
 
 var vote = {};
-module.exports = function(overworld_level){
-	vote.overworld_level = overworld_level;
-
-	return vote;
-};
 
 vote.command_name = "vote";
 
@@ -38,3 +32,15 @@ vote.execute = function(args, userdata){
 		}
 	}
 }
+
+module.exports = function(overworld_level){
+	vote.overworld_level = overworld_level;
+
+	alias.add("forward", vote, ["forward"]);
+	alias.add("backward", vote, ["backward"]);
+	alias.add("left", vote, ["left"]);
+	alias.add("right", vote, ["right"]);
+
+	return vote;
+};
+

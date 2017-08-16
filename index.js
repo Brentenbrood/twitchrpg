@@ -1,4 +1,5 @@
 //Initial requires.
+var readline = require('readline');
 var tmi = require('tmi.js');
 var user = require('./src/server/accounts/user.js');
 socketserver = require('./src/server/socketserver.js');
@@ -31,4 +32,21 @@ client.on("chat", function(channel, userstate, message){
   //Using this if statement you can check the contents of a message and create commands.
   //This checks the contents of the message to see if they match the given message, this means that the message HAS to be that it cannot just contain that message.
   //This allows you to set commands or even words without worrying if someone was to use the word in a sentence or so on.
+});
+
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+console.log("exit the server with ctrl+c");
+rl.prompt();
+
+rl.on('line', (input) => {
+  //TODO: make it so you can make commands work via the console
+
+  rl.prompt();
+}).on('close', () => {
+  console.log('exiting...');
+  process.exit(0);
 });
