@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Dir = TwitchPlayerController.DoorDirection;
-
-//TODO: Make this a singleton
 public class TwitchOverworldUI : MonoBehaviour
 {
     public Canvas Canvas;

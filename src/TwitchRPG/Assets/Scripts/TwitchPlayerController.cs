@@ -5,6 +5,7 @@ using System.Linq;
 using EL.Dungeon;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class TwitchPlayerController : MonoBehaviour
 {
@@ -99,11 +100,13 @@ public class TwitchPlayerController : MonoBehaviour
 
     private IEnumerator CollectVotes()
     {
-        float startTime = Time.time;
-        while (startTime + VotingTime > Time.time)
-        {
-            yield return null;
-        }
+//        float startTime = Time.time;
+//        while (startTime + VotingTime > Time.time)
+//        {
+//            yield return null;
+//        }
+
+        yield return new WaitForSeconds(VotingTime);
 
         Debug.Log("Collecting votes!");
 

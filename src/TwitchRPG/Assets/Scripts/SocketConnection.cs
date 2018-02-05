@@ -149,26 +149,15 @@ public class SocketConnection : MonoBehaviour
         }
 
         //TODO: Check if the incomming message is a request or response before doing this
-        if (waitingRequests.Count > 0)
+        if (!request.request)
         {
-            LinkedListNode<TwitchBotRequest> lastWaiter = null;
-            for (int i = 0; i < waitingRequests.Count; i++)
+            for (LinkedListNode<TwitchBotRequest> node = waitingRequests.First; node != null; node = node.Next)
             {
-                LinkedListNode<TwitchBotRequest> waiter;
-                if (lastWaiter == null)
-                    waiter = waitingRequests.First;
-                else
+                if (node.Value.Request.type == request.type)
                 {
-                    waiter = lastWaiter.Next;
-                }
-
-                if (waiter.Value.Request.type == request.type)
-                {
-                    waiter.Value.Response = request;
+                    node.Value.Response = request; //TODO: HueHueHue this is not threadsafe at all
                     break;
                 }
-
-                lastWaiter = waiter;
             }
         }
     }
@@ -176,11 +165,6 @@ public class SocketConnection : MonoBehaviour
     private void SendData(byte[] data)
     {
         StartCoroutine(SendQueue(data));
-    }
-    public void GetAllPlayers()
-    {
-        byte[] data = System.Text.Encoding.UTF8.GetBytes("getallplayers");
-        SendData(data);
     }
     IEnumerator SendQueue(byte[] data)
     {

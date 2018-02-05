@@ -9,7 +9,7 @@ public class DataParser : MonoBehaviour {
     public GameObject humanPrefab;
     // Use this for initialization
     void Start () {
-        socket.GetAllPlayers();
+        
     }
 	
 	// Update is called once per frame

@@ -50,8 +50,7 @@ public class TwitchBotRequest : CustomYieldInstruction
 
     public TwitchBotRequest(string requestType, params JSONNode[] args)
     {
-        Request = new JsonRequest();
-        Request.type = requestType;
+        Request = new JsonRequest(requestType);
         foreach (JSONNode node in args)
         {
             Request.data.Add(node);
