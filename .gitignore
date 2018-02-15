@@ -60,6 +60,7 @@ typings/
 # editors
 .idea/
 .vs/
+*.sublime-workspace
 
 # etc
 package-lock.json
