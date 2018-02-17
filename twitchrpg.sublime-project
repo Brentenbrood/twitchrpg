@@ -1,2 +1,27 @@
 {
+	"folders":
+	[
+		{
+			"path": ".",
+			"file_include_patterns": ["*.js", "Usefull things to remember.txt"],
+			"folder_exclude_patterns": ["*"]
+		},
+		{
+			"path": "src\\server"
+		}
+	],
+	
+	"settings":
+    {
+    	"show_panel_on_build": false
+    },
+
+    "build_systems":
+    [
+        {
+            "name": "Start Nodejs Server",
+            "working_dir": "$project_path",
+            "shell_cmd": "start node index.js"
+        }
+    ]
 }

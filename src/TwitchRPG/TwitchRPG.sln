@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchRPG", "TwitchRPG.csproj", "{5151C056-482A-8813-34D5-F08E9202EF5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchRPG.Editor", "TwitchRPG.Editor.csproj", "{E0B67A0E-9825-80EC-20AB-6D1393185658}"

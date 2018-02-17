@@ -18,3 +18,7 @@ In javascript om een 'constructor' functie te maken die een object maakt als je 
 		//do some shit
 	}
 	module.exports = Server;
+
+Om de npm installatie op te zetten als je net hebt gecloned:
+	"npm install"
+
