@@ -74,6 +74,7 @@ twitchrpg.iml
 /src/TwitchRPG/[Bb]uild
 /src/TwitchRPG/[Bb]uilds/
 /src/TwitchRPG/[Ll]ibrary/
+/src/TwitchRPG/*.sln*
 sysinfo.txt
 *.stackdump
 /src/TwitchRPG/Assets/AssetStoreTools*
@@ -91,6 +92,7 @@ sysinfo.txt
 *.pidb.meta
 *.suo
 /*.sln*
+*.sln
 *.user
 *.unityproj
 *.booproj
